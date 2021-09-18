@@ -1,0 +1,234 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+  <script src='js/gif.js'></script>
+  <script src="js/FileSaver.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>生成gif数字雨头像</title>
+  <style>
+    canvas {
+      left: 10px;
+      top: 10px;
+      background: tansparent;
+    }
+
+    body {
+      background: #222;
+      color: #fff;
+    }
+
+    #uploadPreview {
+      display: none;
+    }
+
+    input {
+      top: 500px;
+    }
+
+    .fileLabel {
+      color: #fff;
+      line-height: 2em;
+      border: 1px solid #eee;
+      border-radius: 3px;
+      cursor: pointer;
+      padding: 0 5px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    #msg{
+      color: #f45b36;
+    }
+  </style>
+</head>
+
+<body>
+  <img src='' id='uploadPreview'>
+  <canvas width='400' height='400' id='canvas'></canvas>
+  <div>
+    <label class="fileLabel" for="file"> 选择图片</label>
+    <input type='file' style="display: none" id="file">
+  </div>
+  <div>
+    <label style='color:#fff'> 选择字符颜色</label>
+    <input type='color' id='color'>
+  </div>
+  <p style='color:#fff'>使用正方形图片效果比较好,默认生成20帧,生成图片后右键另存为即可</p>
+  <p id='msg'></p>
+  <img src='' id='output'>
+  <script>
+    // 数字雨
+    let gifData, setwidth = 400;
+    class Spot {
+      constructor(x, y, speed, color) {
+        this.x = x;
+        this.y = y + Math.random() * 6;
+        this.speed = speed;
+        this.color = color;
+        this.text = this.getNumber();
+        this.opacity = 1;
+        this.disappered = Math.random() * 30;// 0 - 30
+      }
+      getNumber() {
+        // 1，0，2，4 中随机返回一个数字
+        const arr = [1, 0, 2, 4];
+        let index = parseInt(Math.random() * 4);
+        return arr[index];
+      }
+    }
+
+    class Pic {
+      constructor(width, height, col, row) {
+        this.width = width;
+        this.height = height;
+        this.cols = col || 15;//20
+        this.rows = row || 30;//10
+        this.spots = this.initSpots();
+      }
+      rnd(){
+        return 1 + Math.ceil(2 * Math.random())
+      }
+      initSpots() {
+        let cols = this.cols;
+        let colDist = this.width / this.cols;//每列宽
+        let rowDist = this.height / this.rows; //每行宽
+        let spots = [];
+
+		console.log('cols',this.cols)
+		console.log('rows',this.rows)
+		
+        for (let i = 0; i < this.cols; i++) {
+          let colSpots = [], 
+              dist = colDist * i, // x 坐标
+              speed = this.rnd();//每列向下移动速度一样
+
+          for (let j = 0; j < this.rows; j++) {
+		  //创建雨滴 （x坐标，y坐标，间距）
+            colSpots.push(new Spot(dist, rowDist * j, speed));
+          }
+          spots.push(colSpots);
+        }
+        return spots;
+      }
+      static drawCanvas(pic, cb) {
+        let spots = pic.spots;
+        let canvas = document.querySelector('canvas');
+        let ctx = canvas.getContext('2d');
+        let img = document.querySelector('img');
+        ctx.fillStyle = "#fff";
+        ctx.font = "8px yahei";
+        function _draw() {
+		
+		  // 清空画布
+          ctx.clearRect(0, 0, pic.width, pic.height);
+          // 画底图
+          if (img.src) {
+            ctx.drawImage(img, 0, 0, setwidth, setwidth * img.height / img.width);
+          }
+          // 画数字        
+          ctx.shadowBlur = 10;
+
+          for (let colSpots of spots) {
+            for (let spot of colSpots) {
+              let color = `rgba(${Pic.fontColor.join(',')},${(spot.y) / setwidth})`;
+              ctx.fillStyle = color;
+              ctx.shadowColor = color;
+              ctx.fillText(spot.text, spot.x, spot.y);//文字 内容 及坐标
+              spot.y = spot.y > pic.height - spot.disappered 
+                      ? 0 
+                      : spot.y + spot.speed;//雨滴下落，雨滴超界 就置0，不超界就加speed
+            }
+          }
+
+          //画完之后保存frame到gif中
+          cb && cb(canvas)
+          requestAnimationFrame(_draw);
+        }
+        requestAnimationFrame(_draw);
+      }
+    }
+    Pic.fontColor = [255, 255, 255];
+    // 初始化
+    let fileInput = document.getElementById('file');
+    let colorInput = document.getElementById('color');
+    let imgLoaded = false;
+
+    fileInput.onchange = function(){
+        if (this.files.length === 0) { return; }
+
+        let oFile = this.files[0];
+        let oFReader = new FileReader();
+        const rFilter = /^(?:image\/bmp|image\/webp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
+        console.log(oFile.type)
+        if (!rFilter.test(oFile.type)) { 
+          alert("You must select a valid image file!"); return; 
+        }
+        oFReader.readAsDataURL(oFile);
+
+        oFReader.onload = function (oFREvent) {
+          let uploadImg = document.getElementById("uploadPreview");
+          uploadImg.src = oFREvent.target.result; // base64 
+          uploadImg.onload = setTimeout(gifRender, 500);
+        };
+    }
+
+    colorInput.onchange = function () {
+      Pic.fontColor = /#(\w{2})(\w{2})(\w{2})/.exec(this.value).slice(1).map(c => parseInt('0x' + c));
+      setTimeout(gifRender, 500);
+    }
+    let isWorking = false;
+	//生成gif
+    function gifRender() {
+      if (isWorking) return;
+      isWorking = true;
+	  //创建 两个workers 线程
+      let gif = new GIF({
+        workers: 2,
+        quality: 10,
+        workerScript: 'js/gif.worker.js'
+      });
+      let msgEl = document.getElementById('msg');
+      let canvas = document.getElementById('canvas');
+      msgEl.innerHTML = '开始生成gif,稍等';
+
+      gif.on('finished', function (blob) {
+        isWorking = false;
+        let url = URL.createObjectURL(blob);
+        gifData = blob;
+
+        msgEl.innerHTML = `
+        <a download href=${url} style="color:#fff">下载</a>
+        <span onclick="save()" style="margin-left:10px;font-size:12px;color:#e5e5e5">下载失败?点这里</span>`;
+        // 这里是blob
+        document.getElementById('output').src = url;
+        // 
+      });
+
+      let pic = new Pic(setwidth, setwidth, 20, 10);
+      let renderFinished = false;
+      function addFrame(canvas) {
+        if (renderFinished) return;
+
+		
+        if (gif.frames.length < 50) {
+		//每帧 canvas 绘制完成就 添加到gif
+          gif.addFrame(canvas, {delay: 20});
+        } else {
+			//开始渲染
+          gif.render();
+          renderFinished = true
+          addFrame = null
+        }
+      }
+	  // 绘制 canvas 的同时 执行addFrame回调
+      Pic.drawCanvas(pic, addFrame);
+    }
+    // 使用fileSaver.js保存
+    function save() {
+      saveAs(gifData, 'image/gif');
+    }
+  </script>
+</body>
+
+</html>
