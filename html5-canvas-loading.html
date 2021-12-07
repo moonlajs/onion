@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>HTML5 Canvas实现超酷Loading动画DEMO演示</title>
+
+  <style>
+  
+  body {
+  background: #111;
+  overflow: hidden;
+}
+
+canvas {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+  
+  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+  </style>
+
+</head>
+
+<body>
+
+  <script >
+  
+  var M = Math,
+    PI = M.PI,
+    TWOPI = PI * 2,
+    HALFPI = PI / 2,
+    canvas = document.createElement( 'canvas'),
+    ctx = canvas.getContext( '2d' ),
+    width = canvas.width = 350,
+    height = canvas.height = 350,
+    cx = width / 2,
+    cy = height / 2,
+    count = 40,
+    sizeBase = 0.1,
+    sizeDiv = 5,
+    tick = 0;
+
+ctx.translate( cx, cy );
+
+(function loop() {
+  requestAnimationFrame( loop );  
+  ctx.clearRect( -width / 2, -height / 2, width, height );
+  ctx.fillStyle = '#fff';  
+  var angle = tick / 8,
+      radius = -50 + M.sin( tick / 15 ) * 100,
+      size;
+  
+  for( var i = 0; i < count; i++ ) {
+    angle += PI / 64;
+    radius += i / 30;
+    size = sizeBase + i / sizeDiv;
+    
+    ctx.beginPath();
+    ctx.arc( M.cos( angle ) * radius, M.sin( angle ) * radius, size, 0, TWOPI, false );
+    ctx.fillStyle = 'hsl(200, 70%, 50%)';
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.arc( M.cos( angle ) * -radius, M.sin( angle ) * -radius, size, 0, TWOPI, false );
+    ctx.fillStyle = 'hsl(320, 70%, 50%)';
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.arc( M.cos( angle + HALFPI ) * radius, M.sin( angle + HALFPI ) * radius, size, 0, TWOPI, false );
+    ctx.fillStyle = 'hsl(60, 70%, 50%)';
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.arc( M.cos( angle + HALFPI ) * -radius, M.sin( angle + HALFPI ) * -radius, size, 0, TWOPI );
+    ctx.fillStyle = 'hsl(0, 0%, 100%)';
+    ctx.fill();
+  }
+  
+  tick++;
+})();
+
+document.body.appendChild( canvas );
+  
+  </script>
+
+</body>
+
+</html>
