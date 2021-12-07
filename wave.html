@@ -2,15 +2,15 @@
 <head>
   <title>seen.js</title>
   
-  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+  
   
   <link href="theme.css" rel="stylesheet" type="text/css"/>
   
   
   <script src="seen.min.js"></script>
-  
+  <!--
   <script src="http://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.7.1/coffee-script.min.js"></script>
-  
+  -->
 </head>
 <body>
 <body>
@@ -18,49 +18,67 @@
     <h1>seen.js<span style="font-size:0.5em;padding-left:20px;color:#888;">
 	Render 3D scenes into SVG or HTML5 Canvas.</span></h1>
 
-    <canvas id="seen-canvas" width="900" height="150"></canvas>
+    <canvas id="seen-canvas" width="900" height="450"></canvas>
 
     
 
-  <script type="text/coffeescript">
-    width               = 900
-    height              = 150
-    equilateralAltitude = Math.sqrt(3.0) / 2.0
-    triangleScale       = 70
-    patch_width         = width * 2.5
-    patch_height        = height * 3.0
+  <script type="text/javascript">
+   var context, equilateralAltitude, height, noiser, 
+   patch_height, patch_width, scene, shape, triangleScale, width;
 
-    # Create patch of triangles that spans the view
-    shape = seen.Shapes.patch(
-      patch_width / triangleScale / equilateralAltitude
-      patch_height / triangleScale
-    )
-    .scale(triangleScale)
-    .translate(-patch_width/2, -patch_height/2 + 50, -100)
-    .rotx(-0.3)
-    seen.Colors.randomSurfaces2(shape)
+width = 900;
 
-    # Create scene and render context
-    scene = new seen.Scene
-      fractionalPoints : true
-      model            : seen.Models.default().add(shape)
-      viewport         : seen.Viewports.center(width, height)
+height = 450;
 
-    context = seen.Context('seen-canvas', scene).render()
+equilateralAltitude = 1 || Math.sqrt(3.0) / 2.0; // 等边高度 = 0.8660254037844386
 
-    # Apply animated 3D simplex noise to patch vertices
-    noiser = new seen.Simplex3D(Math.random())
-    context.animate()
-      .onBefore((t)->
-        t *= -
-        for surf in shape.surfaces
-          for p in surf.points
-            p.z = 2*noiser.noise(p.x/8, p.y/8, t * 1e-4)
-          # Since we're modifying the point directly, we need to mark the surface dirty
-          # to make sure the cache doesn't ignore the change
-          surf.dirty = true
-      )
-      .start()
+triangleScale = 70;
+
+patch_width = width * 2.5;
+
+patch_height = height * 3.0;
+
+shape = seen.Shapes.patch(patch_width / triangleScale / equilateralAltitude, 
+patch_height / triangleScale)
+.scale(triangleScale)
+.translate(-patch_width / 2, -patch_height / 2 + 50, -100)
+.rotx(-0.3);
+
+seen.Colors.randomSurfaces2(shape);
+
+scene = new seen.Scene({
+  fractionalPoints: true, // 微小的Point
+  model: seen.Models["default"]().add(shape),
+  viewport: seen.Viewports.center(width, height)
+});
+
+context = seen.Context('seen-canvas', scene).render();
+
+noiser = new seen.Simplex3D(Math.random());
+console.log(noiser) // {  gradP: (512) [],perm: (512) []} 
+// noise: ƒ (t,n,e) , seed: ƒ (t)
+context.animate().onBefore(function(t) {
+  var p, surf , alist ;
+  
+  alist = (function() {
+    var _i, _j, _len, _len1, _ref, _ref1, _results;
+    _ref = shape.surfaces;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      surf = _ref[_i];
+      _ref1 = surf.points;
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        p = _ref1[_j];
+        p.z = 2 * noiser.noise(p.x / 8, p.y / 8, t * 1e-4);//创造波纹  1e-4 =  0.0001
+      }
+      _results.push(surf.dirty = true);
+    }
+    return _results;
+  })()
+  //t *= -alist// t =  NaN?
+ 
+  return ;
+}).start();
   </script>
 
 </body>
