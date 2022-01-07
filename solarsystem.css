@@ -45,7 +45,7 @@ body
 
 .universe
 {
-    background: url("img/universe.png") no-repeat center center;
+    background: url("images/universe.png") no-repeat center center;
     height: 100%;
 }
 
@@ -64,7 +64,7 @@ body
 .solarsystem .sun
 {
     position: absolute;
-    background: url("img/sun.png") no-repeat center center;
+    background: url("images/sun.png") no-repeat center center;
     background-size: contain;
     width: 150px;
     height: 150px;
@@ -157,7 +157,7 @@ body
 
 .orbit.mercury > .planet > .ball
 {
-    background-image: url("img/mercury.png");
+    background-image: url("images/mercury.png");
     animation-duration: 13s;
 }
 
@@ -189,7 +189,7 @@ body
 
 .orbit.venus > .planet > .ball
 {
-    background-image: url("img/venus.png");
+    background-image: url("images/venus.png");
     animation-duration: 20s;
 }
 /*#endregion */
@@ -220,7 +220,7 @@ body
 
 .orbit.earth > .planet > .ball
 {
-    background-image: url("img/earth.png");
+    background-image: url("images/earth.png");
     animation-duration: 22s;
 }
 /*#endregion */
@@ -251,7 +251,7 @@ body
 
 .orbit.mars > .planet > .ball
 {
-    background-image: url("img/mars.png");
+    background-image: url("images/mars.png");
     animation-duration: 30s;
 }
 /*#endregion */
@@ -280,7 +280,7 @@ body
 
 .orbit.jupiter > .planet > .ball
 {
-    background-image: url("img/jupiter.png");
+    background-image: url("images/jupiter.png");
     animation-duration: 60s;
 }
 /*#endregion */
@@ -309,7 +309,7 @@ body
 
 .orbit.saturn > .planet > .ball
 {
-    background-image: url("img/saturn.png");
+    background-image: url("images/saturn.png");
     animation-duration: 70s;
 }
 /*#endregion */
@@ -338,7 +338,7 @@ body
 
 .orbit.uranus > .planet > .ball
 {
-    background-image: url("img/uranus.png");
+    background-image: url("images/uranus.png");
     animation-duration: 90s;
 }
 /*#endregion */
@@ -367,7 +367,7 @@ body
 
 .orbit.neptune > .planet > .ball
 {
-    background-image: url("img/neptune.png");
+    background-image: url("images/neptune.png");
     animation-duration: 100s;
 }
 /*#endregion */
@@ -398,7 +398,7 @@ body
 
 .orbit.pluto > .planet > .ball
 {
-    background-image: url("img/pluto.png");
+    background-image: url("images/pluto.png");
     animation-duration: 110s;
 }
 
