@@ -1,0 +1,3910 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+
+
+
+
+
+
+    <head>
+    <title>CSSans Pro - The Colourful, Sassy, CSS Font</title>
+    <meta name="description" content="CSSans Pro is a flexible CSS only font by Izabela Andronache & Codrin Pavel"/>
+    <meta name="google-site-verification" content="iw7EWSHh99-Y8Tvsm-PH_ScN95_TRnv2qdhzOPVVCdU" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
+    <meta name="theme-color" content="#1f3368">
+    <meta name="msapplication-navbutton-color" content="#1f3368">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1f3368">
+
+    <meta property="fb:admins" content="100000026051093"/>
+    <meta property="fb:app_id" content="1090138207825112"/>
+    <meta property="og:title" content="CSSans Pro"/>
+    <meta property="og:url" content="https://cssans.pro"/>
+    <meta property="og:image" content="https://cssans.pro/cssans.pro.jpg" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="480" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="CSSans Pro"/>
+    <meta property="og:description" content="The Colourful, Sassy, CSS Font"/>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://cssans.pro">
+    <meta name="twitter:title" content="CSSans Pro">
+    <meta name="twitter:description" content="The Colourful, Sassy, CSS Font">
+    <meta name="twitter:image" content="https://cssans.pro/cssans.pro.jpg">
+    <meta name="twitter:image:src" content="https://cssans.pro/cssans.pro.jpg">
+    <meta name="twitter:image:width" content="1000" />
+    <meta name="twitter:image:height" content="480" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cssans.pro/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://cssans.pro/icon-64x64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cssans.pro/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cssans.pro/icon-16x16.png">
+
+    <link rel="canonical" href="https://cssans.pro/" />
+	<style>
+:root {
+	--cssans-primary:31,51,104;
+	--cssans-secondary:237,21,118;
+	--cssans-accent1:43,208,247;
+	--cssans-accent2:255,92,92;
+	--cssans-accent3:255,216,9;
+	--cssans-letter-spacing:.1em;
+	--cssans-word-spacing:1em;
+	--cssans-line-height:1.1em
+}
+[class^="cssans:"] {
+	line-height:0;
+	font-size:inherit;
+	text-align:left;
+	display:inline-block;
+	position:relative;
+	width:2em;
+	height:3em;
+	margin-right:var(--cssans-letter-spacing);
+	margin-bottom:var(--cssans-line-height)
+}
+[class^="cssans:"]:after,[class^="cssans:"]:before {
+	content:"";
+	position:absolute
+}
+.cssans {
+	line-height:0
+}
+.cssans__word {
+	display:inline-block;
+	position:relative;
+	z-index:1
+}
+.cssans__word:not(:last-child) {
+	margin-right:var(--cssans-word-spacing)
+}
+.cssans--center {
+	text-align:center
+}
+.cssans--center .cssans__word {
+	margin-left:calc(var(--cssans-word-spacing)/2);
+	margin-right:calc(var(--cssans-word-spacing)/2)
+}
+.cssans--right {
+	text-align:right
+}
+.cssans--right .cssans__word {
+	margin-left:var(--cssans-word-spacing);
+	margin-right:0
+}
+.cssans--slanted .cssans__word {
+	-webkit-transform:skew(-15deg);
+	transform:skew(-15deg)
+}
+.cssans__accessible {
+	clip:rect(1px,1px,1px,1px);
+	-webkit-clip-path:inset(1px);
+	clip-path:inset(1px);
+	border:0;
+	padding:0;
+	width:1px;
+	height:1px;
+	margin:-1px;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	position:absolute;
+	background:#000;
+	color:#fff;
+	font-size:20px
+}
+.cssans\:a:before {
+	width:2em;
+	height:2em;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)),RGB(var(--cssans-accent1))),linear-gradient(90deg,RGB(var(--cssans-secondary)),RGB(var(--cssans-secondary)));
+	background-repeat:no-repeat;
+	background-size:1em 1em,2em 2em;
+	background-position:0 0,0 0;
+	border-radius:50%;
+	bottom:0
+}
+.cssans\:a:after {
+	width:1em;
+	height:2em;
+	bottom:0;
+	left:1em;
+	background:RGBA(var(--cssans-primary),.6)
+}
+.cssans\:b:before,.cssans\:d:before,.cssans\:p:before,.cssans\:q:before {
+	background:RGB(var(--cssans-primary));
+	width:2em;
+	height:2em;
+	top:1em;
+	border-radius:50%
+}
+.cssans\:b:after,.cssans\:d:after,.cssans\:p:after,.cssans\:q:after {
+	width:1em;
+	height:3em;
+	top:0;
+	background:RGBA(var(--cssans-secondary),.54)
+}
+.cssans\:c {
+	width:1.7em;
+	height:2em
+}
+.cssans\:c:before {
+	background:RGB(var(--cssans-primary));
+	width:1em;
+	height:2em;
+	border-top-left-radius:1em;
+	border-bottom-left-radius:1em;
+	z-index:1
+}
+.cssans\:c:after {
+	border-left:1em solid transparent;
+	border-right:1em solid transparent;
+	border-top:1em solid transparent;
+	border-top-color:rgb(var(--cssans-secondary));
+	border-bottom:1em solid transparent;
+	border-bottom-color:rgb(var(--cssans-accent1));
+	border-radius:50%
+}
+.cssans\:d:after {
+	left:auto;
+	right:0
+}
+.cssans\:e:before {
+	height:2em;
+	width:2em;
+	background:linear-gradient(0deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-secondary)),RGB(var(--cssans-secondary)));
+	background-repeat:no-repeat;
+	background-size:1em 2em,1em 1em;
+	background-position:0 0,1em 0;
+	border-radius:50%;
+	z-index:1;
+	bottom:0
+}
+.cssans\:e:after {
+	border:1em solid transparent;
+	border-bottom:1em solid rgb(var(--cssans-accent1));
+	border-radius:50%;
+	bottom:0
+}
+.cssans\:f {
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1em 1em,1em 1em;
+	background-position:0 2em,1em 0;
+	border-top-right-radius:1em
+}
+.cssans\:f:after {
+	width:1em;
+	height:3em;
+	border-radius:1em 0;
+	background:linear-gradient(0deg,RGBA(var(--cssans-secondary),.54) 1em,RGB(var(--cssans-secondary)) 0,RGB(var(--cssans-secondary)) 2em,RGB(var(--cssans-accent3)) 0)
+}
+.cssans\:g {
+	background:linear-gradient(90deg,transparent 1em,RGB(var(--cssans-primary)) 0) no-repeat;
+	background-size:2em 3em;
+	top:1em
+}
+.cssans\:g:before {
+	background:RGBA(var(--cssans-secondary),.6);
+	width:2em;
+	height:2em;
+	border-radius:50%
+}
+.cssans\:g:after {
+	border:1em solid transparent;
+	border-bottom:1em solid rgb(var(--cssans-accent1));
+	border-radius:50%;
+	bottom:0;
+	z-index:-1
+}
+.cssans\:h:before {
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)) 1em,RGB(var(--cssans-accent1)) 0) no-repeat,linear-gradient(90deg,RGB(var(--cssans-accent2)) 1em,RGB(var(--cssans-primary)) 0) no-repeat;
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em;
+	height:2em;
+	width:2em;
+	bottom:0;
+	border-radius:1em 1em 0 0
+}
+.cssans\:h:after {
+	background:RGBA(var(--cssans-primary),.6);
+	width:1em;
+	height:2em;
+	top:0
+}
+.cssans\:i {
+	width:1em
+}
+.cssans\:i:before {
+	background:RGB(var(--cssans-primary));
+	width:1em;
+	height:2em;
+	bottom:0
+}
+.cssans\:j:before {
+	background:linear-gradient(0deg,RGB(var(--cssans-accent2)) 1em,RGB(var(--cssans-secondary)) 0,RGB(var(--cssans-secondary)) 2em,RGB(var(--cssans-primary)) 0),linear-gradient(0deg,RGB(var(--cssans-accent1)),RGB(var(--cssans-accent1)));
+	background-repeat:no-repeat;
+	background-size:1em 3em,1em 1em;
+	background-position:1em 0,0 2em;
+	width:2em;
+	height:3em;
+	border-radius:0 0 1em 1em;
+	bottom:-1em
+}
+.cssans\:k {
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,transparent 0) no-repeat;
+	background-size:1em 3em
+}
+.cssans\:k:after,.cssans\:k:before {
+	width:2em;
+	height:1em;
+	background:RGB(var(--cssans-accent1));
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+	bottom:0;
+	z-index:-1
+}
+.cssans\:k:before {
+	bottom:1em;
+	border-radius:0 0 1em 1em
+}
+.cssans\:l {
+	width:1em;
+	background:RGB(var(--cssans-primary));
+	border-bottom-left-radius:1em
+}
+.cssans\:m,.cssans\:M {
+	width:3em;
+	height:2em
+}
+.cssans\:m:after,.cssans\:M:after,.cssans\:m:before,.cssans\:M:before {
+	width:2em;
+	height:2em;
+	background:linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-primary)) 0) no-repeat;
+	border-top-right-radius:1em
+}
+.cssans\:m:after,.cssans\:M:after {
+	width:1em;
+	right:0
+}
+.cssans\:n {
+	height:2em
+}
+.cssans\:n:before {
+	width:2em;
+	height:2em;
+	background:linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-primary)) 0) no-repeat;
+	border-top-right-radius:1em
+}
+.cssans\:o {
+	height:2em;
+	background:RGB(var(--cssans-primary));
+	border-radius:50%
+}
+.cssans\:p,.cssans\:q {
+	height:2em
+}
+.cssans\:p:before,.cssans\:q:before {
+	top:0
+}
+.cssans\:q:before {
+	background:RGB(var(--cssans-accent1))
+}
+.cssans\:q:after {
+	right:0
+}
+.cssans\:r {
+	height:2em;
+	width:1.7em;
+	background:linear-gradient(90deg,RGBA(var(--cssans-secondary),.4) 1em,transparent) no-repeat;
+	background-size:1em 1em
+}
+.cssans\:r:before {
+	width:1em;
+	height:2em;
+	background:RGB(var(--cssans-primary));
+	border-radius:1em 0 0 1em;
+	z-index:-1
+}
+.cssans\:r:after {
+	border:1em solid transparent;
+	border-top:1em solid rgb(var(--cssans-secondary));
+	border-radius:50%;
+	z-index:-2
+}
+.cssans\:\$:before,.cssans\:s:before,.cssans\:S:before {
+	width:2em;
+	height:3em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-accent1)) 0),linear-gradient(90deg,RGB(var(--cssans-accent1)) 1em,RGB(var(--cssans-secondary)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 2em;
+	border-radius:1em;
+	top:1em
+}
+.cssans\:\$:after,.cssans\:s:after,.cssans\:S:after {
+	width:2em;
+	height:1em;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent2)) 1em,RGB(var(--cssans-accent3)) 0);
+	top:2em;
+	border-radius:0 1em
+}
+.cssans\:t:before {
+	width:1em;
+	height:1em;
+	background:RGB(var(--cssans-accent1));
+	top:1em;
+	left:1em
+}
+.cssans\:t:after {
+	top:0;
+	width:1em;
+	height:3em;
+	border-bottom-left-radius:1em;
+	background:linear-gradient(0deg,RGB(var(--cssans-accent2)) 1em,RGB(var(--cssans-secondary)) 0,RGB(var(--cssans-secondary)) 2em,RGB(var(--cssans-primary)) 0)
+}
+.cssans\:u:before {
+	width:2em;
+	height:1em;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent3)),RGB(var(--cssans-accent3)) 1em,RGB(var(--cssans-primary)) 0);
+	top:1em
+}
+.cssans\:u:after {
+	width:2em;
+	height:1em;
+	background:RGB(var(--cssans-accent1));
+	border-radius:0 0 1em 1em;
+	top:2em
+}
+.cssans\:v:after,.cssans\:v:before,.cssans\:w:after,.cssans\:w:before {
+	width:1em;
+	height:2em;
+	top:1em
+}
+.cssans\:v:before,.cssans\:w:before {
+	border-radius:0 1em;
+	background:RGB(var(--cssans-accent2));
+	left:0
+}
+.cssans\:v:after,.cssans\:w:after {
+	width:1em;
+	height:2em;
+	border-radius:1em 0;
+	background:RGB(var(--cssans-primary));
+	right:0
+}
+.cssans\:w {
+	height:2em;
+	width:1em;
+	margin-left:1em;
+	margin-right:calc(1em + var(--cssans-letter-spacing));
+	background:linear-gradient(0deg,RGB(var(--cssans-accent1)),RGB(var(--cssans-accent1)) 1em);
+	background-repeat:no-repeat;
+	background-size:1em 2em;
+	border-radius:1em 1em 0 0
+}
+.cssans\:w:before {
+	left:-1em;
+	top:0
+}
+.cssans\:w:after {
+	right:-1em;
+	top:0
+}
+.cssans\:x:after,.cssans\:X:after,.cssans\:x:before,.cssans\:X:before {
+	width:50%;
+	height:2em;
+	top:1em
+}
+.cssans\:x:before,.cssans\:X:before {
+	background:linear-gradient(0deg,RGB(var(--cssans-primary)) 50%,RGB(var(--cssans-secondary)) 0);
+	border-radius:0 3em 3em 0
+}
+.cssans\:x:after,.cssans\:X:after {
+	background:linear-gradient(0deg,RGB(var(--cssans-secondary)) 50%,RGB(var(--cssans-primary)) 0);
+	border-radius:3em 0 0 3em;
+	right:0
+}
+.cssans\:y {
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)),RGB(var(--cssans-accent1)) 1em);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 100%;
+	border-radius:0 0 1em 1em
+}
+.cssans\:y:before {
+	width:2em;
+	height:1em;
+	top:1em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-accent2)) 0)
+}
+.cssans\:y:after {
+	width:1em;
+	height:2em;
+	border-bottom-right-radius:1em;
+	background:RGBA(var(--cssans-primary),.54);
+	bottom:-1em;
+	right:0
+}
+.cssans\:z:after,.cssans\:Z:after,.cssans\:z:before,.cssans\:Z:before {
+	width:100%;
+	height:1em
+}
+.cssans\:z:before,.cssans\:Z:before {
+	background:linear-gradient(90deg,RGB(var(--cssans-accent3)) 50%,RGB(var(--cssans-accent1)) 0);
+	border-bottom-right-radius:3em;
+	top:1em
+}
+.cssans\:z:after,.cssans\:Z:after {
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)) 50%,RGB(var(--cssans-secondary)) 0);
+	border-top-left-radius:3em;
+	top:2em
+}
+.cssans\:A {
+	border-radius:1em 1em 0 0;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-accent3)) 0),linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-primary)) 0),linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-accent1)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em,0 2em
+}
+.cssans\:B {
+	width:2.5em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1.5em 3em
+}
+.cssans\:B:before {
+	width:1em;
+	height:1em;
+	background:RGB(var(--cssans-accent1));
+	border-radius:50%;
+	top:0;
+	left:1em;
+	z-index:-1
+}
+.cssans\:B:after {
+	width:2em;
+	height:2em;
+	background:RGB(var(--cssans-secondary));
+	border-radius:50%;
+	bottom:0;
+	left:.5em;
+	z-index:-1
+}
+.cssans\:C {
+	width:2.56em
+}
+.cssans\:C:before {
+	border-left:1.5em solid transparent;
+	border-right:1.5em solid transparent;
+	border-top:1.5em solid transparent;
+	border-top-color:rgb(var(--cssans-secondary));
+	border-bottom:1.5em solid transparent;
+	border-bottom-color:rgb(var(--cssans-accent1));
+	border-radius:50%;
+	z-index:-1
+}
+.cssans\:C:after {
+	width:3em;
+	height:3em;
+	background:linear-gradient(0deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1.5em 3em;
+	border-radius:50%
+}
+.cssans\:D {
+	width:3em;
+	background:linear-gradient(0deg,RGB(var(--cssans-secondary)),RGB(var(--cssans-secondary)));
+	background-repeat:no-repeat;
+	background-size:1.5em 3em
+}
+.cssans\:D:before {
+	width:3em;
+	height:3em;
+	background:linear-gradient(0deg,RGB(var(--cssans-primary)) 1.5em,RGB(var(--cssans-accent1)) 0);
+	border-radius:50%;
+	z-index:-1
+}
+.cssans\:E {
+	margin-top:2em;
+	height:1em;
+	background:RGB(var(--cssans-primary));
+	border-radius:0 1em
+}
+.cssans\:E:before {
+	height:1em;
+	width:2em;
+	top:-1em;
+	border-radius:0 1em 1em 0;
+	background:RGB(var(--cssans-accent1))
+}
+.cssans\:E:after {
+	height:1em;
+	width:2em;
+	top:-2em;
+	border-radius:1em 0;
+	background:RGB(var(--cssans-secondary))
+}
+.cssans\:F {
+	border-radius:1em 1em 0 0;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent3)) 1em,RGB(var(--cssans-accent1)) 0),linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,transparent 0),linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,transparent 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em,1em 1em,1em 1em;
+	background-position:0 0,0 1em,0 2em
+}
+.cssans\:F:before {
+	border:1em solid transparent;
+	border-top:1em solid rgb(var(--cssans-primary));
+	border-radius:50%;
+	top:1em;
+	z-index:-1
+}
+.cssans\:G {
+	width:3em;
+	background:linear-gradient(-45deg,RGB(var(--cssans-accent1)) 1.06em,RGB(var(--cssans-primary)) 0);
+	background-repeat:no-repeat;
+	background-size:1.5em 3em;
+	border-radius:50%
+}
+.cssans\:G:before {
+	border-left:1.5em solid transparent;
+	border-right:1.5em solid transparent;
+	border-top:1.5em solid transparent;
+	border-top-color:rgb(var(--cssans-secondary));
+	border-bottom:1.5em solid transparent;
+	border-bottom-color:rgb(var(--cssans-accent3));
+	border-radius:50%;
+	z-index:-1
+}
+.cssans\:G:after {
+	width:1.5em;
+	height:1.5em;
+	background:RGB(var(--cssans-accent2));
+	right:0;
+	bottom:0;
+	z-index:-2
+}
+.cssans\:H {
+	width:2.5em;
+	background:linear-gradient(-45deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1em 3em
+}
+.cssans\:H:before {
+	width:2em;
+	height:1em;
+	background:RGBA(var(--cssans-accent3),.54);
+	top:1em;
+	left:0
+}
+.cssans\:H:after {
+	width:1em;
+	height:3em;
+	background:RGB(var(--cssans-secondary));
+	top:0;
+	right:0
+}
+.cssans\:I {
+	width:1em;
+	background:RGB(var(--cssans-primary))
+}
+.cssans\:J {
+	border-radius:0 0 1em 1em;
+	background:linear-gradient(90deg,transparent 1em,RGB(var(--cssans-primary)) 0),linear-gradient(90deg,transparent 1em,RGB(var(--cssans-secondary)) 0),linear-gradient(90deg,RGB(var(--cssans-accent2)) 1em,RGB(var(--cssans-accent3)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em,0 2em
+}
+.cssans\:K {
+	width:2.5em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1em 3em;
+	overflow:hidden
+}
+.cssans\:K:before {
+	background:RGB(var(--cssans-accent1));
+	border-radius:1.5em 1.5em 0 0;
+	bottom:0
+}
+.cssans\:K:after,.cssans\:K:before {
+	width:3em;
+	height:1.5em;
+	left:-.5em;
+	z-index:-1
+}
+.cssans\:K:after {
+	background:RGB(var(--cssans-secondary));
+	border-radius:0 0 1.5em 1.5em;
+	top:0
+}
+.cssans\:L {
+	border-radius:0 0 0 1em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,transparent 0),linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,transparent 0),linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-primary)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em,0 2em
+}
+.cssans\:L:before {
+	width:1em;
+	height:1em;
+	background:RGB(var(--cssans-accent3));
+	border-top-right-radius:100%;
+	top:0;
+	left:0
+}
+.cssans\:M,.cssans\:M:after,.cssans\:M:before {
+	height:3em
+}
+.cssans\:M:before {
+	border-top-right-radius:1em 1.5em
+}
+.cssans\:N {
+	width:3em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,transparent 0,transparent 2em,RGB(var(--cssans-primary)) 0);
+	overflow:hidden
+}
+.cssans\:N:before {
+	width:1em;
+	height:3em;
+	background:RGB(var(--cssans-secondary));
+	left:1em;
+	border-radius:0 1em
+}
+.cssans\:O,.cssans\:Q {
+	width:3em;
+	background:RGB(var(--cssans-primary));
+	border-radius:50%
+}
+.cssans\:P {
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1em 3em
+}
+.cssans\:P:before {
+	width:2em;
+	height:2em;
+	background:linear-gradient(0deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-accent1)) 0);
+	border-radius:50%;
+	z-index:-1
+}
+.cssans\:Q:before {
+	width:1.5em;
+	height:1.5em;
+	background:RGB(var(--cssans-secondary));
+	right:0;
+	bottom:0;
+	z-index:-1
+}
+.cssans\:R {
+	width:2.5em;
+	background:linear-gradient(0deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1.5em 3em
+}
+.cssans\:R:before {
+	height:2em;
+	top:0;
+	border-radius:50%
+}
+.cssans\:R:after,.cssans\:R:before {
+	width:2em;
+	right:0;
+	background:linear-gradient(0deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-accent1)) 0);
+	z-index:-1
+}
+.cssans\:R:after {
+	height:1em;
+	bottom:0;
+	border-radius:1em 1em 0 0
+}
+.cssans\:S:before {
+	top:0
+}
+.cssans\:S:after {
+	top:1em
+}
+.cssans\:T {
+	width:3em
+}
+.cssans\:T:before {
+	width:1em;
+	height:3em;
+	top:0;
+	left:1em;
+	background:RGB(var(--cssans-primary))
+}
+.cssans\:T:after {
+	width:3em;
+	height:1em;
+	top:0;
+	left:0;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)) 1em,transparent 0,transparent 2em,RGB(var(--cssans-secondary)) 0)
+}
+.cssans\:U {
+	border-radius:0 0 1em 1em;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)) 1em,RGB(var(--cssans-primary)) 0),linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-secondary)) 0),linear-gradient(90deg,RGB(var(--cssans-accent3)) 1em,RGB(var(--cssans-primary)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em,0 2em
+}
+.cssans\:V:before {
+	width:1em;
+	height:3em;
+	background:RGB(var(--cssans-accent2));
+	border-radius:0 1em
+}
+.cssans\:V:after {
+	width:1em;
+	height:3em;
+	background:RGB(var(--cssans-primary));
+	border-radius:1em 0;
+	top:0;
+	right:0
+}
+.cssans\:W {
+	width:1em;
+	height:2em;
+	margin-top:1em;
+	margin-left:1em;
+	margin-right:calc(1em + var(--cssans-letter-spacing));
+	background:RGB(var(--cssans-secondary));
+	border-radius:1em 1em 0 0
+}
+.cssans\:W:after,.cssans\:W:before {
+	width:1em;
+	height:3em;
+	top:-1em;
+	left:-1em;
+	background:RGB(var(--cssans-accent2));
+	border-radius:0 1em
+}
+.cssans\:W:after {
+	left:1em;
+	background:RGB(var(--cssans-primary));
+	border-radius:1em 0
+}
+.cssans\:X {
+	width:3em
+}
+.cssans\:X:after,.cssans\:X:before {
+	height:3em;
+	top:0
+}
+.cssans\:Y {
+	width:3em;
+	background:linear-gradient(0deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-secondary)) 0);
+	background-repeat:no-repeat;
+	background-size:1em 2em;
+	background-position:1em 1em
+}
+.cssans\:Y:after,.cssans\:Y:before {
+	width:1em;
+	height:2em;
+	background:linear-gradient(0deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-secondary)) 0);
+	border-radius:0 1em
+}
+.cssans\:Y:after {
+	right:0;
+	border-radius:1em 0
+}
+.cssans\:Z {
+	width:3em;
+	height:3em
+}
+.cssans\:Z:before {
+	top:0;
+	height:1.5em
+}
+.cssans\:Z:after {
+	top:1.5em;
+	height:1.5em
+}
+.cssans\:1 {
+	background:linear-gradient(90deg,transparent .7em,RGB(var(--cssans-primary)) 0) no-repeat;
+	width:1.7em
+}
+.cssans\:1:before {
+	border:1em solid transparent;
+	border-bottom:1em solid rgb(var(--cssans-primary));
+	border-radius:50%;
+	top:-1em;
+	left:-.3em
+}
+.cssans\:2,.cssans\:5 {
+	background-image:linear-gradient(90deg,RGB(var(--cssans-accent1)) 1em,RGB(var(--cssans-primary)) 0),linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-accent1)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 2em;
+	border-radius:1em 1em 0 0
+}
+.cssans\:2:before,.cssans\:5:before {
+	width:2em;
+	height:1em;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent3)) 1em,RGB(var(--cssans-accent2)) 0);
+	top:1em;
+	border-radius:1em 0
+}
+.cssans\:3:before {
+	background:linear-gradient(90deg,RGB(var(--cssans-secondary)),RGB(var(--cssans-secondary))),linear-gradient(90deg,RGB(var(--cssans-accent1)),RGB(var(--cssans-accent1)));
+	background-repeat:no-repeat;
+	background-size:2em 1em,1em 1em;
+	background-position:0 0,1em 1em
+}
+.cssans\:3:after,.cssans\:3:before {
+	width:2em;
+	height:2em;
+	border-radius:50%
+}
+.cssans\:3:after {
+	top:1em;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)),RGB(var(--cssans-accent1))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1em 1em,2em 1em;
+	background-position:1em 0,0 1em
+}
+.cssans\:4:before {
+	width:1em;
+	height:2em;
+	border-radius:0 1em;
+	background:linear-gradient(0deg,RGB(var(--cssans-accent1)) 1em,RGB(var(--cssans-secondary)) 0)
+}
+.cssans\:4:after {
+	width:1em;
+	height:3em;
+	background:RGB(var(--cssans-primary));
+	border-top-left-radius:1em;
+	right:0
+}
+.cssans\:5 {
+	background-image:linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-accent1)) 0),linear-gradient(90deg,RGB(var(--cssans-accent1)) 1em,RGB(var(--cssans-primary)) 0);
+	border-radius:0 0 1em 1em
+}
+.cssans\:5:before {
+	border-radius:0 1em
+}
+.cssans\:6 {
+	background:linear-gradient(90deg,RGB(var(--cssans-secondary)),RGB(var(--cssans-secondary)));
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0;
+	border-radius:1em
+}
+.cssans\:6:before {
+	width:2em;
+	height:2em;
+	bottom:0;
+	background:RGB(var(--cssans-primary));
+	border-radius:50%
+}
+.cssans\:6:after {
+	width:1em;
+	height:1em;
+	background:RGBA(var(--cssans-accent1),.6);
+	top:1em
+}
+.cssans\:7 {
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)) 1em,RGB(var(--cssans-primary)) 0),linear-gradient(90deg,transparent 1em,RGB(var(--cssans-secondary)) 0),linear-gradient(90deg,transparent 1em,RGB(var(--cssans-primary)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em,0 2em;
+	border-top-left-radius:1em
+}
+.cssans\:8:after,.cssans\:8:before {
+	width:2em;
+	height:2em;
+	background:RGB(var(--cssans-primary));
+	border-radius:50%
+}
+.cssans\:8:after {
+	bottom:0
+}
+.cssans\:9:before {
+	width:2em;
+	height:2em;
+	background:RGB(var(--cssans-primary));
+	border-radius:1em 1em 0 1em
+}
+.cssans\:9:after {
+	width:2em;
+	height:1em;
+	background:RGB(var(--cssans-secondary));
+	border-radius:0 0 1em 1em;
+	bottom:0
+}
+.cssans\:0 {
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-accent3)) 0),linear-gradient(90deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-primary)) 0),linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-accent1)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em,0 2em;
+	border-radius:1em
+}
+.cssans\:\! {
+	width:1em
+}
+.cssans\:\!:before {
+	width:1em;
+	height:2em;
+	background:RGB(var(--cssans-primary))
+}
+.cssans\:\!:after {
+	width:1em;
+	height:1em;
+	bottom:0;
+	border-top-right-radius:1em;
+	background:RGB(var(--cssans-secondary))
+}
+.cssans\:\?:before {
+	width:2em;
+	height:2em;
+	background-image:linear-gradient(90deg,RGB(var(--cssans-primary)) 1em,RGB(var(--cssans-accent1)) 0),linear-gradient(90deg,transparent 1em,RGB(var(--cssans-secondary)) 0);
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 0,0 1em;
+	border-radius:1em
+}
+.cssans\:\?:after {
+	width:1em;
+	height:2em;
+	background-image:linear-gradient(0deg,RGB(var(--cssans-secondary)) 1em,RGB(var(--cssans-primary)) 0);
+	border-top-left-radius:1em;
+	bottom:0
+}
+.cssans\:\%60,.cssans\:\',.cssans\:\,,.cssans\:\. {
+	width:1em
+}
+.cssans\:\%60:before,.cssans\:\':before,.cssans\:\,:before,.cssans\:\.:before {
+	width:1em;
+	height:1em;
+	top:2em;
+	background:RGB(var(--cssans-secondary))
+}
+.cssans\:\%60:before,.cssans\:\':before,.cssans\:\,:before {
+	top:2.5em;
+	border-bottom-right-radius:1em
+}
+.cssans\:\%60:before,.cssans\:\':before {
+	top:0
+}
+.cssans\:\%22:after,.cssans\:\%22:before {
+	width:1em;
+	height:1em;
+	top:0;
+	background:RGB(var(--cssans-secondary));
+	border-bottom-right-radius:1em
+}
+.cssans\:\%22:after {
+	right:0
+}
+.cssans\:\:,.cssans\:\;
+	,.cssans\:\= {
+	width:1em
+}
+.cssans\:\::before,.cssans\:\;
+	:before,.cssans\:\=:before {
+	width:100%;
+	height:2.5em;
+	top:.5em;
+	background-image:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:100% 1em;
+	background-position:0 0,0 1.5em
+}
+.cssans\:\;
+	:before {
+	top:1em;
+	background-image:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-secondary)),RGB(var(--cssans-secondary)));
+	border-bottom-right-radius:1em
+}
+.cssans\:\* {
+	background-image:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:.5em 2em;
+	background-position:.75em 0
+}
+.cssans\:\*:after,.cssans\:\*:before {
+	width:2em;
+	height:.5em;
+	top:.75em;
+	background:RGB(var(--cssans-primary));
+	-webkit-transform:rotate(33deg);
+	transform:rotate(33deg)
+}
+.cssans\:\*:after {
+	-webkit-transform:rotate(-33deg);
+	transform:rotate(-33deg)
+}
+.cssans\:\~:before {
+	width:2em;
+	height:1em;
+	background:RGB(var(--cssans-secondary));
+	border-radius:1em 0;
+	top:.5em
+}
+.cssans\:\%5B,.cssans\:\%5D,.cssans\:\(,.cssans\:\) {
+	width:1.5em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1.5em 1em,1em 1em,1.5em 1em;
+	background-position:0 0,0 1em,0 2em
+}
+.cssans\:\%5D,.cssans\:\) {
+	background-position:0 0,.5em 1em,0 2em
+}
+.cssans\:\( {
+	border-radius:1em 0 0 1em
+}
+.cssans\:\) {
+	border-radius:0 1em 1em 0
+}
+.cssans\:\%7B,.cssans\:\%7D {
+	width:1.5em
+}
+.cssans\:\%7B:after,.cssans\:\%7B:before,.cssans\:\%7D:after,.cssans\:\%7D:before {
+	width:100%;
+	height:1.5em;
+	background:RGB(var(--cssans-primary));
+	border-radius:0 0 100% 0
+}
+.cssans\:\%7B:after,.cssans\:\%7D:after {
+	border-radius:0 100% 0 0;
+	bottom:0
+}
+.cssans\:\%7D:before {
+	border-radius:0 0 0 100%
+}
+.cssans\:\%7D:after {
+	border-radius:100% 0 0 0
+}
+.cssans\:\_ {
+	width:3em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:3em 1em;
+	background-position:0 2em
+}
+.cssans\:\- {
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:2em 1em;
+	background-position:0 1em
+}
+.cssans\:\= {
+	width:2em
+}
+.cssans\:\=:before {
+	top:.25em
+}
+.cssans\:\+ {
+	width:3em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:3em 1em,1em 3em;
+	background-position:0 1em,1em 0
+}
+.cssans\:\%3C:after,.cssans\:\%3C:before,.cssans\:\%3E:after,.cssans\:\%3E:before {
+	width:2em;
+	height:1em;
+	background:RGB(var(--cssans-primary));
+	border-radius:1em 0;
+	top:.5em
+}
+.cssans\:\%3C:after,.cssans\:\%3E:after {
+	border-radius:0 1em;
+	top:1.5em
+}
+.cssans\:\%3E:before {
+	border-radius:0 1em
+}
+.cssans\:\%3E:after {
+	border-radius:1em 0
+}
+.cssans\:\& {
+	margin-top:1.1em;
+	margin-bottom:.8em;
+	top:-1.1em;
+	border-radius:1em 0
+}
+.cssans\:\&,.cssans\:\&:before {
+	width:2.5em;
+	height:.9em;
+	background:RGB(var(--cssans-primary))
+}
+.cssans\:\&:before {
+	border-radius:0 1em 0 1em;
+	bottom:-.8em
+}
+.cssans\:\&:after {
+	width:1.6em;
+	height:1.6em;
+	left:.15em;
+	background:RGB(var(--cssans-primary));
+	border-radius:50%;
+	top:-1.1em
+}
+.cssans\:\$ {
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:1em 1em;
+	background-position:.5em 0,.5em 3em;
+	height:4em;
+	top:.5em
+}
+.cssans\:\$:before {
+	top:.5em
+}
+.cssans\:\$:after {
+	top:1.5em
+}
+.cssans\:\# {
+	width:3em;
+	background:linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary))),linear-gradient(90deg,RGB(var(--cssans-primary)),RGB(var(--cssans-primary)));
+	background-repeat:no-repeat;
+	background-size:3em 1em,3em 1em,1em 3em,1em 3em;
+	background-position:0 .4em,0 1.6em,.4em,1.6em 0;
+	-webkit-transform:skew(-10deg);
+	transform:skew(-10deg);
+	margin-right:calc(.3em + var(--cssans-letter-spacing));
+	margin-left:.3em
+}
+.cssans\:\%5C,.cssans\:\%25,.cssans\:\/ {
+	width:1em;
+	background:RGB(var(--cssans-primary));
+	-webkit-transform:skew(-30deg);
+	transform:skew(-30deg);
+	margin-left:.9em;
+	margin-right:calc(.9em + var(--cssans-letter-spacing))
+}
+.cssans\:\%5C {
+	-webkit-transform:skew(30deg);
+	transform:skew(30deg)
+}
+.cssans\:\@ {
+	width:3em;
+	border-radius:50%;
+	background:RGB(var(--cssans-primary));
+	border:.25em solid rgb(var(--cssans-secondary));
+	border-right:.25em solid transparent;
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg)
+}
+.cssans\:\@:before {
+	width:1.5em;
+	height:1.5em;
+	top:.5em;
+	left:.5em;
+	background:linear-gradient(90deg,RGB(var(--cssans-accent1)),RGB(var(--cssans-accent1))),linear-gradient(90deg,RGB(var(--cssans-secondary)),RGB(var(--cssans-secondary)));
+	background-repeat:no-repeat;
+	background-size:.75em .75em,1.5em 1.5em;
+	background-position:0 0,0 0;
+	border-radius:1em 0 0 1em;
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg)
+}
+.cssans\:\%60:before {
+	border-radius:1em 0 0 0
+}
+.cssans\:\%25:after,.cssans\:\%25:before {
+	width:1em;
+	height:1em;
+	background:RGB(var(--cssans-secondary));
+	border-radius:.5em;
+	-webkit-transform:skew(30deg);
+	transform:skew(30deg);
+	left:-1.3em
+}
+.cssans\:\%25:after {
+	bottom:0;
+	left:auto;
+	right:-1.3em
+}
+.cssans\:\%5E {
+	width:1em
+}
+.cssans\:\%5E:after,.cssans\:\%5E:before {
+	width:.5em;
+	height:1em;
+	background:RGB(var(--cssans-primary));
+	border-radius:.5em 0
+}
+.cssans\:\%5E:after {
+	left:.5em;
+	border-radius:0 .5em
+}
+.cssans\:\%7C {
+	width:1em;
+	height:4em;
+	background:RGB(var(--cssans-primary));
+	top:.5em
+}
+*,:after,:before {
+	box-sizing:border-box
+}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,button,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+	margin:0;
+	padding:0;
+	border:0;
+	background:0;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline
+}
+h1,h2,h3,h4,h5,h6 {
+	margin:0
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display:block
+}
+html {
+	line-height:1.15;
+	-webkit-text-size-adjust:100%
+}
+a {
+	color:inherit;
+	text-decoration:none;
+	background-color:transparent
+}
+ol,ul {
+	list-style:none
+}
+img {
+	border-style:none;
+	max-width:100%
+}
+blockquote,q {
+	quotes:none
+}
+blockquote:after,blockquote:before,q:after,q:before {
+	content:"";
+	content:none
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+[type=button],[type=reset],[type=submit],button {
+	-webkit-appearance:button
+}
+[hidden] {
+	display:none
+}
+@font-face {
+	font-family:Shadows Into Light;
+	font-style:normal;
+	font-weight:400;
+	font-display:swap;
+	src:local("Shadows Into Light"),local("ShadowsIntoLight"),url(/fonts/Shadows-Into-Light.woff2) format("woff2"),url(/fonts/Shadows-Into-Light.woff) format("woff");
+	unicode-range:U+00??,U+0131,U+0152-0153,U+02bb-02bc,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2122,U+2191,U+2193,U+2212,U+2215,U+feff,U+fffd
+}
+body,html {
+	font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-size:18px;
+	background:#fdfdfd
+}
+footer,header,main {
+	display:block
+}
+.align-right {
+	text-align:right
+}
+.cursive {
+	font-family:Shadows Into Light,cursive,sans-serif
+}
+@media (min-width:768px) {
+	.align-md-right {
+	text-align:right
+}
+}@media (max-width:767px) {
+	body>div:last-child {
+	left:28px!important
+}
+}.row>* {
+	padding-left:8px;
+	padding-right:8px;
+	flex:0 0 auto
+}
+@media (min-width:768px) {
+	.row>* {
+	padding-left:16px;
+	padding-right:16px;
+	flex:0 0 auto
+}
+}@media (min-width:1024px) {
+	.row>* {
+	padding-left:24px;
+	padding-right:24px;
+	flex:0 0 auto
+}
+}@media (min-width:1440px) {
+	.row>* {
+	padding-left:32px;
+	padding-right:32px;
+	flex:0 0 auto
+}
+}.col-1 {
+	width:8.33333%;
+	max-width:8.33333%;
+	flex:0 0 8.33333%
+}
+.col-2 {
+	width:16.66667%;
+	max-width:16.66667%;
+	flex:0 0 16.66667%
+}
+.col-3 {
+	width:25%;
+	max-width:25%;
+	flex:0 0 25%
+}
+.col-4 {
+	width:33.33333%;
+	max-width:33.33333%;
+	flex:0 0 33.33333%
+}
+.col-5 {
+	width:41.66667%;
+	max-width:41.66667%;
+	flex:0 0 41.66667%
+}
+.col-6 {
+	width:50%;
+	max-width:50%;
+	flex:0 0 50%
+}
+.col-7 {
+	width:58.33333%;
+	max-width:58.33333%;
+	flex:0 0 58.33333%
+}
+.col-8 {
+	width:66.66667%;
+	max-width:66.66667%;
+	flex:0 0 66.66667%
+}
+.col-9 {
+	width:75%;
+	max-width:75%;
+	flex:0 0 75%
+}
+.col-10 {
+	width:83.33333%;
+	max-width:83.33333%;
+	flex:0 0 83.33333%
+}
+.col-11 {
+	width:91.66667%;
+	max-width:91.66667%;
+	flex:0 0 91.66667%
+}
+.col-12 {
+	width:100%;
+	max-width:100%;
+	flex:0 0 100%
+}
+@media (min-width:768px) {
+	.col-md-1 {
+	width:8.33333%;
+	max-width:8.33333%;
+	flex:0 0 8.33333%
+}
+.col-md-2 {
+	width:16.66667%;
+	max-width:16.66667%;
+	flex:0 0 16.66667%
+}
+.col-md-3 {
+	width:25%;
+	max-width:25%;
+	flex:0 0 25%
+}
+.col-md-4 {
+	width:33.33333%;
+	max-width:33.33333%;
+	flex:0 0 33.33333%
+}
+.col-md-5 {
+	width:41.66667%;
+	max-width:41.66667%;
+	flex:0 0 41.66667%
+}
+.col-md-6 {
+	width:50%;
+	max-width:50%;
+	flex:0 0 50%
+}
+.col-md-7 {
+	width:58.33333%;
+	max-width:58.33333%;
+	flex:0 0 58.33333%
+}
+.col-md-8 {
+	width:66.66667%;
+	max-width:66.66667%;
+	flex:0 0 66.66667%
+}
+.col-md-9 {
+	width:75%;
+	max-width:75%;
+	flex:0 0 75%
+}
+.col-md-10 {
+	width:83.33333%;
+	max-width:83.33333%;
+	flex:0 0 83.33333%
+}
+.col-md-11 {
+	width:91.66667%;
+	max-width:91.66667%;
+	flex:0 0 91.66667%
+}
+.col-md-12 {
+	width:100%;
+	max-width:100%;
+	flex:0 0 100%
+}
+}@media (min-width:1024px) {
+	.col-lg-1 {
+	width:8.33333%;
+	max-width:8.33333%;
+	flex:0 0 8.33333%
+}
+.col-lg-2 {
+	width:16.66667%;
+	max-width:16.66667%;
+	flex:0 0 16.66667%
+}
+.col-lg-3 {
+	width:25%;
+	max-width:25%;
+	flex:0 0 25%
+}
+.col-lg-4 {
+	width:33.33333%;
+	max-width:33.33333%;
+	flex:0 0 33.33333%
+}
+.col-lg-5 {
+	width:41.66667%;
+	max-width:41.66667%;
+	flex:0 0 41.66667%
+}
+.col-lg-6 {
+	width:50%;
+	max-width:50%;
+	flex:0 0 50%
+}
+.col-lg-7 {
+	width:58.33333%;
+	max-width:58.33333%;
+	flex:0 0 58.33333%
+}
+.col-lg-8 {
+	width:66.66667%;
+	max-width:66.66667%;
+	flex:0 0 66.66667%
+}
+.col-lg-9 {
+	width:75%;
+	max-width:75%;
+	flex:0 0 75%
+}
+.col-lg-10 {
+	width:83.33333%;
+	max-width:83.33333%;
+	flex:0 0 83.33333%
+}
+.col-lg-11 {
+	width:91.66667%;
+	max-width:91.66667%;
+	flex:0 0 91.66667%
+}
+.col-lg-12 {
+	width:100%;
+	max-width:100%;
+	flex:0 0 100%
+}
+}@media (min-width:1440px) {
+	.col-xl-1 {
+	width:8.33333%;
+	max-width:8.33333%;
+	flex:0 0 8.33333%
+}
+.col-xl-2 {
+	width:16.66667%;
+	max-width:16.66667%;
+	flex:0 0 16.66667%
+}
+.col-xl-3 {
+	width:25%;
+	max-width:25%;
+	flex:0 0 25%
+}
+.col-xl-4 {
+	width:33.33333%;
+	max-width:33.33333%;
+	flex:0 0 33.33333%
+}
+.col-xl-5 {
+	width:41.66667%;
+	max-width:41.66667%;
+	flex:0 0 41.66667%
+}
+.col-xl-6 {
+	width:50%;
+	max-width:50%;
+	flex:0 0 50%
+}
+.col-xl-7 {
+	width:58.33333%;
+	max-width:58.33333%;
+	flex:0 0 58.33333%
+}
+.col-xl-8 {
+	width:66.66667%;
+	max-width:66.66667%;
+	flex:0 0 66.66667%
+}
+.col-xl-9 {
+	width:75%;
+	max-width:75%;
+	flex:0 0 75%
+}
+.col-xl-10 {
+	width:83.33333%;
+	max-width:83.33333%;
+	flex:0 0 83.33333%
+}
+.col-xl-11 {
+	width:91.66667%;
+	max-width:91.66667%;
+	flex:0 0 91.66667%
+}
+.col-xl-12 {
+	width:100%;
+	max-width:100%;
+	flex:0 0 100%
+}
+}.row {
+	display:flex;
+	flex-wrap:wrap;
+	margin-left:-8px;
+	margin-right:-8px
+}
+@media (min-width:768px) {
+	.row {
+	margin-left:-16px;
+	margin-right:-16px
+}
+}@media (min-width:1024px) {
+	.row {
+	margin-left:-24px;
+	margin-right:-24px
+}
+}@media (min-width:1440px) {
+	.row {
+	margin-left:-32px;
+	margin-right:-32px
+}
+}.wrapper {
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	max-width:1328px;
+	padding-left:20px;
+	padding-right:20px
+}
+@media (min-width:768px) {
+	.wrapper {
+	padding-left:32px;
+	padding-right:32px
+}
+}@media (min-width:1024px) {
+	.wrapper {
+	padding-left:64px;
+	padding-right:64px
+}
+}@media (min-width:1440px) {
+	.wrapper {
+	padding-left:64px;
+	padding-right:64px
+}
+}.js--inview {
+	opacity:0;
+	-webkit-transform:translateY(15%);
+	transform:translateY(15%);
+	transition:opacity .5s,-webkit-transform .5s;
+	transition:opacity .5s,transform .5s;
+	transition:opacity .5s,transform .5s,-webkit-transform .5s;
+	transition-delay:.5s
+}
+.js--inview.playground {
+	transition-delay:1s
+}
+.js--inview.is-inview {
+	opacity:1;
+	-webkit-transform:translateY(0);
+	transform:translateY(0)
+}
+.specimen .cssans__word {
+	top:40px;
+	opacity:0;
+	transition:top .5s,opacity .5s;
+	transition-delay:.5s
+}
+.specimen .cssans__word:first-child {
+	transition-delay:.14s
+}
+.specimen .cssans__word:nth-child(2) {
+	transition-delay:.18s
+}
+.specimen .cssans__word:nth-child(3) {
+	transition-delay:.22s
+}
+.specimen .cssans__word:nth-child(4) {
+	transition-delay:.26s
+}
+.specimen .cssans__word:nth-child(5) {
+	transition-delay:.3s
+}
+.specimen .cssans__word:nth-child(6) {
+	transition-delay:.34s
+}
+.specimen .cssans__word:nth-child(7) {
+	transition-delay:.38s
+}
+.specimen .cssans__word:nth-child(8) {
+	transition-delay:.42s
+}
+.specimen .cssans__word:nth-child(9) {
+	transition-delay:.46s
+}
+.specimen .cssans__word:nth-child(10) {
+	transition-delay:.5s
+}
+.specimen .cssans__word:nth-child(11) {
+	transition-delay:.54s
+}
+.specimen .cssans__word:nth-child(12) {
+	transition-delay:.58s
+}
+.specimen .cssans__word:nth-child(13) {
+	transition-delay:.62s
+}
+.specimen .cssans__word:nth-child(14) {
+	transition-delay:.66s
+}
+.specimen .cssans__word:nth-child(15) {
+	transition-delay:.7s
+}
+.specimen .cssans__word:nth-child(16) {
+	transition-delay:.74s
+}
+.specimen .cssans__word:nth-child(17) {
+	transition-delay:.78s
+}
+.specimen .cssans__word:nth-child(18) {
+	transition-delay:.82s
+}
+.specimen .cssans__word:nth-child(19) {
+	transition-delay:.86s
+}
+.specimen .cssans__word:nth-child(20) {
+	transition-delay:.9s
+}
+.specimen .cssans__word:nth-child(21) {
+	transition-delay:.94s
+}
+.specimen .cssans__word:nth-child(22) {
+	transition-delay:.98s
+}
+.specimen .cssans__word:nth-child(23) {
+	transition-delay:1.02s
+}
+.specimen .cssans__word:nth-child(24) {
+	transition-delay:1.06s
+}
+.specimen .cssans__word:nth-child(25) {
+	transition-delay:1.1s
+}
+.specimen .cssans__word:nth-child(26) {
+	transition-delay:1.14s
+}
+.specimen .cssans__word:nth-child(27) {
+	transition-delay:1.18s
+}
+.specimen .cssans__word:nth-child(28) {
+	transition-delay:1.22s
+}
+.specimen .cssans__word:nth-child(29) {
+	transition-delay:1.26s
+}
+.specimen .cssans__word:nth-child(30) {
+	transition-delay:1.3s
+}
+.specimen .cssans__word:nth-child(31) {
+	transition-delay:1.34s
+}
+.specimen .cssans__word:nth-child(32) {
+	transition-delay:1.38s
+}
+.specimen .cssans__word.is-inview {
+	top:0;
+	opacity:1
+}
+.screen {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	justify-content:center;
+	height:80vh;
+	min-height:600px
+}
+.screen__cta {
+	text-align:center
+}
+.screen__cta>:not(:last-child) .button {
+	margin-bottom:25px
+}
+.screen .wrapper {
+	margin-left:0;
+	margin-right:0
+}
+@media (min-width:768px) {
+	.screen__cta {
+	text-align:left
+}
+.screen__cta>:not(:last-child) .button {
+	margin-bottom:0
+}
+}.header {
+	padding-bottom:80px;
+	background-color:#1f3368;
+	background-image:url("data:image/svg+xml;
+	charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M29 58.58l7.38-7.39A30.95 30.95 0 0 1 29 37.84a30.95 30.95 0 0 1-7.38 13.36l7.37 7.38zm1.4 1.41l.01.01h-2.84l-7.37-7.38A30.95 30.95 0 0 1 6.84 60H0v-1.02a28.9 28.9 0 0 0 18.79-7.78L0 32.41v-4.84L18.78 8.79A28.9 28.9 0 0 0 0 1.02V0h6.84a30.95 30.95 0 0 1 13.35 7.38L27.57 0h2.84l7.39 7.38A30.95 30.95 0 0 1 51.16 0H60v27.58-.01V60h-8.84a30.95 30.95 0 0 1-13.37-7.4L30.4 60zM29 1.41l-7.4 7.38A30.95 30.95 0 0 1 29 22.16 30.95 30.95 0 0 1 36.38 8.8L29 1.4zM58 1a28.9 28.9 0 0 0-18.8 7.8L58 27.58V1.02zm-20.2 9.2A28.9 28.9 0 0 0 30.02 29h26.56L37.8 10.21zM30.02 31a28.9 28.9 0 0 0 7.77 18.79L56.58 31H30.02zm9.18 20.2A28.9 28.9 0 0 0 58 59V32.4L39.2 51.19zm-19-1.4A28.9 28.9 0 0 0 27.98 31H1.41l18.8 18.8zM27.98 29a28.9 28.9 0 0 0-7.78-18.8L1.41 29h26.57z' fill='%23AFB9ED' fill-opacity='.015' fill-rule='nonzero'/%3E%3C/svg%3E");
+	color:#fff;
+	text-align:center
+}
+.header .wrapper {
+	position:relative;
+	z-index:1
+}
+@media (min-width:768px) {
+	.header {
+	padding-bottom:160px
+}
+}.button {
+	text-transform:uppercase;
+	font-size:16px;
+	line-height:1.4;
+	display:inline-block;
+	font-weight:700;
+	color:#adb9eb;
+	border:2px solid;
+	padding:18px 20px;
+	letter-spacing:1px;
+	position:relative
+}
+.button:active {
+	top:1px
+}
+.button:focus,.button:hover {
+	color:#1f3368;
+	background:#fff;
+	border-color:#fff;
+	outline:0
+}
+.button--full {
+	color:#1f3368;
+	background:#adb9eb;
+	border-color:#adb9eb
+}
+@media (min-width:768px) {
+	.button {
+	font-size:18px;
+	letter-spacing:1px;
+	padding:24px 40px
+}
+}@media (min-width:768px) {
+	[data-title] {
+	position:relative
+}
+[data-title]:before {
+	content:attr(data-title);
+	white-space:nowrap;
+	background:#333;
+	color:#fff;
+	position:absolute;
+	bottom:-34px;
+	left:50%;
+	-webkit-transform:translate(-50%,-25%);
+	transform:translate(-50%,-25%);
+	font-family:monospace;
+	font-size:13px;
+	line-height:1;
+	padding:4px 8px;
+	border-radius:10px;
+	opacity:0;
+	transition:all .15s;
+	pointer-events:none;
+	text-transform:none
+}
+[data-title]:hover:before {
+	opacity:1;
+	-webkit-transform:translate(-50%);
+	transform:translate(-50%)
+}
+}.heading {
+	margin:0
+}
+.heading--small {
+	font-size:14px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	color:#505050;
+	border-top:1px solid #505050;
+	padding:16px 0;
+	margin-top:64px;
+	margin-bottom:18px
+}
+.heading--large {
+	font-size:56px;
+	font-weight:700;
+	line-height:1
+}
+@media (min-width:768px) {
+	.heading--large {
+	font-size:72px
+}
+}.subheading {
+	font-size:24px;
+	font-weight:400;
+	line-height:1;
+	color:#adb9eb;
+	margin-top:12px;
+	margin-bottom:50px
+}
+@media (min-width:768px) {
+	.subheading {
+	font-size:32px;
+	margin-top:32px;
+	margin-bottom:75px
+}
+}.playground {
+	margin-top:-80px;
+	border:1px solid #eee;
+	border-radius:10px 10px 0 0;
+	background:#fff;
+	margin-bottom:64px;
+	position:relative
+}
+.playground__notice {
+	position:absolute;
+	top:-32px;
+	left:-10px;
+	color:#ffd809;
+	font-size:16px
+}
+.playground__notice:before {
+	content:"";
+	width:100px;
+	height:75px;
+	border-color:transparent transparent #ffd809 #ffd809;
+	border-style:dashed;
+	border-width:1px;
+	border-radius:50%;
+	position:absolute;
+	left:-11px;
+	top:0
+}
+.playground__controls {
+	justify-content:space-between;
+	align-items:center;
+	background:#efefef;
+	border-bottom:1px solid #eee;
+	padding:0 8px;
+	border-radius:10px 10px 0 0;
+	position:relative;
+	z-index:1
+}
+.playground__controls .row {
+	align-items:center
+}
+.playground__controls .row>div {
+	padding-top:16px;
+	padding-bottom:16px
+}
+.playground__controls .row>div:last-child {
+	text-align:right
+}
+.playground button,.playground input {
+	border:0;
+	padding:0;
+	outline:0;
+	vertical-align:middle;
+	height:32px
+}
+.playground button {
+	background:0;
+	cursor:pointer
+}
+.playground #ctrl-text {
+	font-size:22px;
+	text-align:center;
+	width:100%;
+	border-radius:20px;
+	padding:0 12px
+}
+.playground .color {
+	font-size:0;
+	display:inline-block
+}
+.playground .jscolor {
+	width:32px;
+	height:32px;
+	border-radius:50%;
+	cursor:pointer;
+	font-size:0
+}
+.playground #ctrl-fontsize {
+	max-width:100%
+}
+.playground__container {
+	display:table;
+	min-height:50vh;
+	width:100%
+}
+.playground #playground {
+	padding:1em 16px;
+	border-top:0;
+	zoom:.5;
+	display:table-cell;
+	vertical-align:middle;
+	width:100%
+}
+.playground .post-to-codepen {
+	position:absolute;
+	bottom:0;
+	right:5px
+}
+.playground .post-to-codepen button {
+	width:40px;
+	height:40px
+}
+@media (min-width:768px) {
+	.playground {
+	margin-top:-160px;
+	margin-bottom:136px
+}
+.playground__notice {
+	font-size:18px
+}
+.playground #playground {
+	zoom:1
+}
+.playground__controls {
+	padding:0 16px
+}
+.playground__controls-text {
+	order:1
+}
+.playground__controls-size {
+	order:2
+}
+.playground .post-to-codepen {
+	right:10px
+}
+.playground .post-to-codepen button {
+	width:60px;
+	height:60px
+}
+}.cta {
+	font-size:24px;
+	text-align:center;
+	max-width:550px;
+	margin:0 auto
+}
+.cta p {
+	margin-bottom:24px
+}
+.cta a {
+	color:#ed1576
+}
+.cta a:hover {
+	text-decoration:underline
+}
+.cta__link {
+	width:32px;
+	height:32px;
+	display:inline-block;
+	margin:0 5px;
+	color:#1f3368!important
+}
+@media (min-width:768px) {
+	.cta {
+	margin-bottom:72px
+}
+}.specimen>div {
+	padding-bottom:32px
+}
+.specimen .cssans--small {
+	font-size:12px
+}
+.specimen .cssans--medium {
+	font-size:18px
+}
+.specimen .cssans--large {
+	font-size:66px
+}
+@media (min-width:768px) {
+	.specimen .cssans--small {
+	font-size:14px
+}
+.specimen .cssans--medium {
+	font-size:22px
+}
+.specimen .cssans--large {
+	font-size:48px
+}
+}@media (min-width:1024px) {
+	.specimen .cssans--large {
+	font-size:62px
+}
+}@media (min-width:1440px) {
+	.specimen .cssans--large {
+	font-size:82px
+}
+}.footer {
+	background:#ff5c5c;
+	color:#fff;
+	margin-top:150px
+}
+.footer .heading {
+	margin-bottom:50px;
+	text-align:center
+}
+.footer .button {
+	color:#fff
+}
+.footer .button:focus,.footer .button:hover {
+	color:#fff;
+	background:#df4e4e;
+	border-color:#df4e4e
+}
+.footer .button--full {
+	color:#df4e4e;
+	background:#fff;
+	border-color:#fff
+}
+.footer__credits {
+	margin-top:50px;
+	text-transform:uppercase;
+	font-weight:700;
+	letter-spacing:1px;
+	font-size:14px;
+	justify-content:space-around
+}
+.footer__credits a {
+	display:inline-block
+}
+.footer__credits b {
+	position:relative;
+	font-size:32px;
+	display:block;
+	margin-bottom:8px
+}
+.footer__credits b.design {
+	right:-5px
+}
+.footer__credits b.code {
+	left:-5px
+}
+.footer__links {
+	margin-top:5px
+}
+.footer__link {
+	width:32px;
+	height:32px;
+	margin-right:10px
+}
+.footer__link:hover {
+	color:#df4e4e
+}
+.footer .align-right .footer__link {
+	margin:0 0 0 10px
+}
+
+	</style>
+	</head>
+    <body>
+        <header class="header screen">
+			<div class="wrapper js--inview">
+				<h1 class="heading heading--large">CSSans Pro</h1>
+				<h2 class="subheading">The Colourful, Sassy, CSS Font</h2>
+				<div class="row screen__cta">
+			<div class="col-12 col-md-6 align-md-right">
+				<a class="button" target="_blank" rel="noopener" href="https://github.com/ZeroSpree/CSSans.Pro#readme">Documentation</a>
+			</div>
+			<div class="col-12 col-md-6">
+				<a class="button button--full" target="_blank" rel="noopener" href="https://github.com/ZeroSpree/CSSans.Pro/blob/master/dist/cssans.min.css">Download (27.5KB)</a>
+			</div>
+		</div>
+			</div>
+		</header>
+
+        <main class="wrapper">
+            <div class="playground js--inview">
+    <span class="playground__notice cursive">Try changing the text, colors and font-size.</span>
+
+    <div class="playground__controls">
+        <div class="row">
+            <div class="col-12 col-md-4 playground__controls-text">
+                <label data-title="Type here to preview text">
+                    <input id="ctrl-text" type="text" value="CSSans Pro" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </label>
+            </div>
+
+            <div class="col-8 col-md-4">
+                <label class="color" data-title="Color: --cssans-primary">
+                    <input data-variable="--cssans-primary" data-rgb="31, 51, 104" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="1f3368" readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </label>
+                <label class="color" data-title="Color: --cssans-secondary">
+                    <input data-variable="--cssans-secondary" data-rgb="237, 21, 118" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ed1576" readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </label>
+                <label class="color" data-title="Color: --cssans-accent1">
+                    <input data-variable="--cssans-accent1" data-rgb="43, 208, 247" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="2bd0f7" readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </label>
+                <label class="color" data-title="Color: --cssans-accent2">
+                    <input data-variable="--cssans-accent2" data-rgb="255, 92, 92" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ff5c5c" readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </label>
+                <label class="color" data-title="Color: --cssans-accent3">
+                    <input data-variable="--cssans-accent3" data-rgb="255, 216, 9" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ffd809" readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </label>
+            </div>
+
+            <div class="col-4 playground__controls-size">
+                <label data-title="Font size">
+                    <input id="ctrl-fontsize" type="range" min="10" max="72" value="44" step="2" />
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="playground__container">
+        <div id="playground" class="cssans--center"></div>
+
+        <form class="post-to-codepen" action="https://codepen.io/pen/define?editors=1100" method="POST" target="_blank">
+          <input type="hidden" id="codepen" name="data" value='{"title": "New Pen!", "html": "<div>Hello, World!</div>"}'>
+          <button data-title="Preview in CodePen" type="submit">
+              
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100%" height="100%" viewBox="0 0 179.851 120.095" enable-background="new 0 0 179.851 120.095"
+     xml:space="preserve">
+<g>
+    <g>
+        <rect x="104.055" y="54.547" fill="#26282c" width="48.38" height="11"/>
+    </g>
+    <g>
+        <g>
+            <path fill="#26282c" d="M149.336,60.047c-8.046-8.046-11.881-23.957-12.196-34.996c11.031,14.821,25.367,27.747,42.711,34.996
+                c-17.344,6.941-31.048,20.649-42.711,34.996C138.087,83.223,140.975,68.875,149.336,60.047z"/>
+        </g>
+    </g>
+</g>
+<g>
+    <polygon fill="#26282c" points="29.301,54.708 29.301,65.388 37.284,60.048   "/>
+    <polygon fill="#26282c" points="56.856,46.956 56.856,32.073 31.855,48.739 43.023,56.21  "/>
+    <polygon fill="#26282c" points="88.239,48.739 63.238,32.073 63.238,46.956 77.072,56.21  "/>
+    <polygon fill="#26282c" points="31.855,71.356 56.856,88.022 56.856,73.14 43.023,63.888  "/>
+    <polygon fill="#26282c" points="63.238,73.14 63.238,88.022 88.239,71.356 77.072,63.888  "/>
+    <polygon fill="#26282c" points="60.047,52.499 48.762,60.048 60.047,67.597 71.333,60.048     "/>
+    <path fill="#26282c" d="M60.047,0C26.885,0,0,26.884,0,60.048s26.885,60.047,60.047,60.047c33.164,0,60.048-26.883,60.048-60.047
+        S93.211,0,60.047,0z M97.175,71.36c0,0.141-0.01,0.279-0.028,0.418c-0.007,0.045-0.018,0.092-0.025,0.137
+        c-0.017,0.09-0.032,0.18-0.056,0.268c-0.014,0.053-0.033,0.104-0.05,0.154c-0.025,0.078-0.051,0.156-0.082,0.234
+        c-0.021,0.053-0.048,0.104-0.071,0.154c-0.034,0.072-0.069,0.143-0.108,0.213c-0.028,0.049-0.061,0.098-0.091,0.146
+        c-0.043,0.066-0.087,0.131-0.135,0.193c-0.035,0.049-0.071,0.094-0.11,0.139c-0.05,0.059-0.103,0.117-0.158,0.172
+        c-0.042,0.043-0.083,0.086-0.127,0.125c-0.058,0.053-0.119,0.104-0.182,0.152c-0.047,0.037-0.094,0.074-0.144,0.109
+        c-0.019,0.012-0.035,0.027-0.054,0.039L61.817,96.64c-0.536,0.357-1.152,0.537-1.771,0.537c-0.616,0-1.233-0.18-1.77-0.537
+        L24.34,74.015c-0.018-0.012-0.034-0.027-0.052-0.039c-0.05-0.035-0.098-0.072-0.145-0.109c-0.062-0.049-0.123-0.1-0.181-0.152
+        c-0.044-0.039-0.086-0.082-0.128-0.125c-0.056-0.055-0.107-0.113-0.159-0.172c-0.037-0.045-0.074-0.09-0.109-0.139
+        c-0.047-0.062-0.092-0.127-0.134-0.193c-0.032-0.049-0.062-0.098-0.092-0.146c-0.039-0.07-0.074-0.141-0.108-0.213
+        c-0.024-0.051-0.049-0.102-0.071-0.154c-0.031-0.078-0.058-0.156-0.082-0.234c-0.018-0.051-0.035-0.102-0.05-0.154
+        c-0.023-0.088-0.039-0.178-0.056-0.268c-0.008-0.045-0.02-0.092-0.025-0.137c-0.019-0.139-0.029-0.277-0.029-0.418V48.735
+        c0-0.141,0.011-0.279,0.029-0.416c0.006-0.047,0.018-0.092,0.025-0.139c0.017-0.09,0.032-0.18,0.056-0.268
+        c0.015-0.053,0.032-0.104,0.05-0.154c0.024-0.078,0.051-0.156,0.082-0.232c0.022-0.053,0.047-0.105,0.071-0.156
+        c0.034-0.072,0.069-0.143,0.108-0.211c0.029-0.051,0.06-0.1,0.092-0.148c0.042-0.066,0.087-0.131,0.134-0.193
+        c0.035-0.047,0.072-0.094,0.109-0.139c0.052-0.059,0.104-0.117,0.159-0.172c0.042-0.043,0.084-0.086,0.128-0.125
+        c0.058-0.053,0.118-0.104,0.181-0.152c0.047-0.037,0.095-0.074,0.145-0.109c0.018-0.012,0.034-0.027,0.052-0.039l33.938-22.625
+        c1.072-0.715,2.468-0.715,3.54,0l33.937,22.625c0.019,0.012,0.035,0.027,0.054,0.039c0.05,0.035,0.097,0.072,0.144,0.109
+        c0.062,0.049,0.124,0.1,0.182,0.152c0.044,0.039,0.085,0.082,0.127,0.125c0.056,0.055,0.108,0.113,0.158,0.172
+        c0.039,0.045,0.075,0.092,0.11,0.139c0.048,0.062,0.092,0.127,0.135,0.193c0.03,0.049,0.062,0.098,0.091,0.148
+        c0.039,0.068,0.074,0.139,0.108,0.211c0.023,0.051,0.05,0.104,0.071,0.156c0.031,0.076,0.057,0.154,0.082,0.232
+        c0.017,0.051,0.036,0.102,0.05,0.154c0.023,0.088,0.039,0.178,0.056,0.268c0.008,0.047,0.019,0.092,0.025,0.139
+        c0.019,0.137,0.028,0.275,0.028,0.416V71.36z"/>
+    <polygon fill="#26282c" points="90.794,65.388 90.794,54.708 82.812,60.048   "/>
+</g>
+</svg>
+
+              <div class="cssans__accessible">Preview in CodePen</div>
+          </button>
+        </form>
+    </div>
+</div>
+
+            <div class="cta js--inview">
+    <p>
+        <b>CSSans Pro</b> is available as a 
+        <a href="https://codepen.io/zerospree/project/editor/XLkwKj" target="_blank" rel="noopener">CodePen Project</a>
+        and <a href="https://github.com/ZeroSpree/CSSans.Pro" target="_blank" rel="noopener">GitHub repository</a>.
+    </p>
+
+    <p>P.S. We love shares, ❤️, ⭐  & follows! Go ahead, don't be shy!</p>
+
+    <div class="cta__social">
+        <a data-title="izadraws on Instagram" class="cta__link" href="https://www.instagram.com/izadraws/" target="_blank" rel="noopener">
+            <div class="cssans__accessible">Follow @izadraws on Instagram</div>
+            
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+
+        </a>
+        <a data-title="Codrin on CodePen" class="cta__link" href="https://codepen.io/zerospree/" target="_blank" rel="noopener">
+            <div class="cssans__accessible">Follow Codrin on CodePen</div>
+            
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+    <line x1="12" y1="22" x2="12" y2="15.5"></line>
+    <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+    <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+    <line x1="12" y1="2" x2="12" y2="8.5"></line>
+</svg>
+
+        </a>
+        <a data-title="Codrin on Twitter" class="cta__link" href="https://twitter.com/zerospree" target="_blank" rel="noopener">
+            <div class="cssans__accessible">Follow Codrin on Twitter</div>
+            
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+
+        </a>
+    </div>
+</div>
+            <div class="row specimen">
+    <div class="col-12 col-md-4">
+        <h2 class="heading heading--small">Glyph</h2>
+        <div class="cssans cssans--large">Ss</div>
+    </div>
+
+    <div class="col-12 col-md-8">
+        <h2 class="heading heading--small">Uppercase</h2>
+        <div class="cssans cssans--medium">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+
+        <h2 class="heading heading--small">Lowercase</h2>
+        <div class="cssans cssans--medium">abcdefghijklmnopqrstuvwxyz</div>
+
+        <h2 class="heading heading--small">Numbers</h2>
+        <div class="cssans cssans--medium">1234567890</div>
+
+        <h2 class="heading heading--small">Symbols</h2>
+        <div class="cssans cssans--medium">`!~,^.*(%)[?]{@};':"&lt;-+=&gt;/&amp;\$#|_</div>
+
+        <h2 class="heading heading--small">Default</h2>
+        <div class="cssans cssans--small">The quick brown fox jumps over the lazy dog</div>
+
+        <h2 class="heading heading--small">Slanted</h2>
+        <div class="cssans cssans--small cssans--slanted">The quick brown fox jumps over the lazy dog</div>
+
+        <h2 class="heading heading--small">Centered</h2>
+        <div class="cssans cssans--small cssans--center">The quick brown fox jumps over the lazy dog</div>
+
+        <h2 class="heading heading--small">Right aligned</h2>
+        <div class="cssans cssans--small cssans--right">The quick brown fox jumps over the lazy dog</div>
+    </div>
+</div>
+        </main>
+
+        <footer class="footer screen">
+    <div class="wrapper js--inview">
+        <h1 class="heading heading--large">CSSans Pro</h1>
+
+        <div class="row screen__cta">
+    <div class="col-12 col-md-6 align-md-right">
+        <a class="button" target="_blank" rel="noopener" href="https://github.com/ZeroSpree/CSSans.Pro#readme">Documentation</a>
+    </div>
+    <div class="col-12 col-md-6">
+        <a class="button button--full" target="_blank" rel="noopener" href="https://github.com/ZeroSpree/CSSans.Pro/blob/master/dist/cssans.min.css">Download (27.5KB)</a>
+    </div>
+</div>
+
+        <div class="row footer__credits">
+            <div class="col-6 align-right">
+                <b class="design">👩🏻‍🎨 </b>
+                Izabela<br/>Andronache
+                <div class="footer__links">
+                    <a data-title="izadraws on Instagram" class="footer__link" href="https://www.instagram.com/izadraws/" target="_blank" rel="noopener">
+                        <div class="cssans__accessible">Follow @izadraws on Instagram</div>
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+
+                    </a>
+                </div>
+            </div>
+            <div class="col-6">
+                <b class="code">👨🏻‍💻</b>
+                Codrin<br/>Pavel
+                <div class="footer__links">
+                    <a data-title="Codrin on CodePen" class="footer__link" href="https://codepen.io/zerospree/" target="_blank" rel="noopener">
+                        <div class="cssans__accessible">Follow Codrin on CodePen</div>
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+    <line x1="12" y1="22" x2="12" y2="15.5"></line>
+    <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+    <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+    <line x1="12" y1="2" x2="12" y2="8.5"></line>
+</svg>
+
+                    </a>
+                    <a data-title="Codrin on Twitter" class="footer__link" href="https://twitter.com/zerospree" target="_blank" rel="noopener">
+                        <div class="cssans__accessible">Follow Codrin on Twitter</div>
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@1"></script>
+		<script>
+		
+		 function CSSans(e, t) {
+                var n = '<div class="cssans__word">'
+                  , s = '<div class="cssans__accessible">' + encodeURI(t) + "</div>" + n;
+                for (var o in t)
+                    s += " " == t[o] ? "</div>" + n : '<b class="cssans:' + encodeURI(t[o]) + '"></b>';
+                return s += "</div>",
+                e.innerHTML = s,
+                e.style.lineHeight = "0px",
+                s
+            }
+            function getParam(e) {
+                for (var t = null, n = [], s = location.search.substr(1).split("&"), o = 0; o < s.length; o++)
+                    (n = s[o].split("="))[0] === e && (t = decodeURIComponent(n[1]));
+                return t
+            }
+            !function(e, t) {
+                "object" == typeof exports && "object" == typeof module 
+				? module.exports = t() : 
+				"function" == typeof define && define.amd 
+				? define([], t) 
+				: "object" == typeof exports 
+				? exports.inView = t() 
+				: e.inView = t()
+            }(this, function() {
+                return function(n) {
+                    function s(e) {
+                        if (o[e])
+                            return o[e].exports;
+                        var t = o[e] = {
+                            exports: {},
+                            id: e,
+                            loaded: !1
+                        };
+                        return n[e].call(t.exports, t, t.exports, s),
+                        t.loaded = !0,
+                        t.exports
+                    }
+                    var o = {};
+                    return s.m = n,
+                    s.c = o,
+                    s.p = "",
+                    s(0)
+                }([function(e, t, n) {
+                    "use strict";
+                    var s, o = n(2), r = (s = o) && s.__esModule ? s : {
+                        default: s
+                    };
+                    e.exports = r.default
+                }
+                , function(e, t) {
+                    e.exports = function(e) {
+                        var t = typeof e;
+                        return null != e && ("object" == t || "function" == t)
+                    }
+                }
+                , function(e, t, n) {
+                    "use strict";
+                    function s(e) {
+                        return e && e.__esModule ? e : {
+                            default: e
+                        }
+                    }
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0
+                    });
+                    var o = s(n(9))
+                      , r = s(n(3))
+                      , i = n(4);
+                    t.default = function() {
+                        if ("undefined" != typeof window) {
+                            var n = {
+                                history: []
+                            }
+                              , s = {
+                                offset: {},
+                                threshold: 0,
+                                test: i.inViewport
+                            }
+                              , t = (0,
+                            o.default)(function() {
+                                n.history.forEach(function(e) {
+                                    n[e].check()
+                                })
+                            }, 100);
+                            ["scroll", "resize", "load"].forEach(function(e) {
+                                return addEventListener(e, t)
+                            }),
+                            window.MutationObserver && addEventListener("DOMContentLoaded", function() {
+                                new MutationObserver(t).observe(document.body, {
+                                    attributes: !0,
+                                    childList: !0,
+                                    subtree: !0
+                                })
+                            });
+                            var e = function(e) {
+                                if ("string" == typeof e) {
+                                    var t = [].slice.call(document.querySelectorAll(e));
+                                    return -1 < n.history.indexOf(e) ? n[e].elements = t : (n[e] = (0,
+                                    r.default)(t, s),
+                                    n.history.push(e)),
+                                    n[e]
+                                }
+                            };
+                            return e.offset = function(t) {
+                                if (void 0 === t)
+                                    return s.offset;
+                                var n = function(e) {
+                                    return "number" == typeof e
+                                };
+                                return ["top", "right", "bottom", "left"].forEach(n(t) ? function(e) {
+                                    return s.offset[e] = t
+                                }
+                                : function(e) {
+                                    return n(t[e]) ? s.offset[e] = t[e] : null
+                                }
+                                ),
+                                s.offset
+                            }
+                            ,
+                            e.threshold = function(e) {
+                                return "number" == typeof e && 0 <= e && e <= 1 ? s.threshold = e : s.threshold
+                            }
+                            ,
+                            e.test = function(e) {
+                                return "function" == typeof e ? s.test = e : s.test
+                            }
+                            ,
+                            e.is = function(e) {
+                                return s.test(e, s)
+                            }
+                            ,
+                            e.offset(0),
+                            e
+                        }
+                    }()
+                }
+                , function(e, t) {
+                    "use strict";
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0
+                    });
+                    var s = function() {
+                        function s(e, t) {
+                            for (var n = 0; n < t.length; n++) {
+                                var s = t[n];
+                                s.enumerable = s.enumerable || !1,
+                                s.configurable = !0,
+                                "value"in s && (s.writable = !0),
+                                Object.defineProperty(e, s.key, s)
+                            }
+                        }
+                        return function(e, t, n) {
+                            return t && s(e.prototype, t),
+                            n && s(e, n),
+                            e
+                        }
+                    }()
+                      , n = function() {
+                        function n(e, t) {
+                            (function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }
+                            )(this, n),
+                            this.options = t,
+                            this.elements = e,
+                            this.current = [],
+                            this.handlers = {
+                                enter: [],
+                                exit: []
+                            },
+                            this.singles = {
+                                enter: [],
+                                exit: []
+                            }
+                        }
+                        return s(n, [{
+                            key: "check",
+                            value: function() {
+                                var r = this;
+                                return this.elements.forEach(function(e) {
+                                    var t = r.options.test(e, r.options)
+                                      , n = r.current.indexOf(e)
+                                      , s = -1 < n
+                                      , o = !t && s;
+                                    t && !s && (r.current.push(e),
+                                    r.emit("enter", e)),
+                                    o && (r.current.splice(n, 1),
+                                    r.emit("exit", e))
+                                }),
+                                this
+                            }
+                        }, {
+                            key: "on",
+                            value: function(e, t) {
+                                return this.handlers[e].push(t),
+                                this
+                            }
+                        }, {
+                            key: "once",
+                            value: function(e, t) {
+                                return this.singles[e].unshift(t),
+                                this
+                            }
+                        }, {
+                            key: "emit",
+                            value: function(e, t) {
+                                for (; this.singles[e].length; )
+                                    this.singles[e].pop()(t);
+                                for (var n = this.handlers[e].length; -1 < --n; )
+                                    this.handlers[e][n](t);
+                                return this
+                            }
+                        }]),
+                        n
+                    }();
+                    t.default = function(e, t) {
+                        return new n(e,t)
+                    }
+                }
+                , function(e, t) {
+                    "use strict";
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0
+                    }),
+                    t.inViewport = function(e, t) {
+                        var n = e.getBoundingClientRect()
+                          , s = n.top
+                          , o = n.right
+                          , r = n.bottom
+                          , i = n.left
+                          , a = n.width
+                          , l = n.height
+                          , c = r
+                          , d = window.innerWidth - i
+                          , h = window.innerHeight - s
+                          , u = o
+                          , p = t.threshold * a
+                          , m = t.threshold * l;
+                        return c > t.offset.top + m && d > t.offset.right + p && h > t.offset.bottom + m && u > t.offset.left + p
+                    }
+                }
+                , function(n, e) {
+                    (function(e) {
+                        var t = "object" == typeof e && e && e.Object === Object && e;
+                        n.exports = t
+                    }
+                    ).call(e, function() {
+                        return this
+                    }())
+                }
+                , function(e, t, n) {
+                    var s = n(5)
+                      , o = "object" == typeof self && self && self.Object === Object && self
+                      , r = s || o || Function("return this")();
+                    e.exports = r
+                }
+                , function(e, t, n) {
+                    var y = n(1)
+                      , w = n(8)
+                      , b = n(10)
+                      , E = Math.max
+                      , x = Math.min;
+                    e.exports = function(s, o, e) {
+                        function r(e) {
+                            var t = c
+                              , n = d;
+                            return c = d = void 0,
+                            f = e,
+                            u = s.apply(n, t)
+                        }
+                        function i(e) {
+                            var t = e - m;
+                            return void 0 === m || o <= t || t < 0 || g && h <= e - f
+                        }
+                        function a() {
+                            var e, t, n = w();
+                            return i(n) ? l(n) : void (p = setTimeout(a, (t = o - ((e = n) - m),
+                            g ? x(t, h - (e - f)) : t)))
+                        }
+                        function l(e) {
+                            return p = void 0,
+                            n && c ? r(e) : (c = d = void 0,
+                            u)
+                        }
+                        function t() {
+                            var e, t = w(), n = i(t);
+                            if (c = arguments,
+                            d = this,
+                            m = t,
+                            n) {
+                                if (void 0 === p)
+                                    return f = e = m,
+                                    p = setTimeout(a, o),
+                                    v ? r(e) : u;
+                                if (g)
+                                    return p = setTimeout(a, o),
+                                    r(m)
+                            }
+                            return void 0 === p && (p = setTimeout(a, o)),
+                            u
+                        }
+                        var c, d, h, u, p, m, f = 0, v = !1, g = !1, n = !0;
+                        if ("function" != typeof s)
+                            throw new TypeError("Expected a function");
+                        return o = b(o) || 0,
+                        y(e) && (v = !!e.leading,
+                        h = (g = "maxWait"in e) ? E(b(e.maxWait) || 0, o) : h,
+                        n = "trailing"in e ? !!e.trailing : n),
+                        t.cancel = function() {
+                            void 0 !== p && clearTimeout(p),
+                            c = m = d = p = void (f = 0)
+                        }
+                        ,
+                        t.flush = function() {
+                            return void 0 === p ? u : l(w())
+                        }
+                        ,
+                        t
+                    }
+                }
+                , function(e, t, n) {
+                    var s = n(6);
+                    e.exports = function() {
+                        return s.Date.now()
+                    }
+                }
+                , function(e, t, n) {
+                    var r = n(7)
+                      , i = n(1);
+                    e.exports = function(e, t, n) {
+                        var s = !0
+                          , o = !0;
+                        if ("function" != typeof e)
+                            throw new TypeError("Expected a function");
+                        return i(n) && (s = "leading"in n ? !!n.leading : s,
+                        o = "trailing"in n ? !!n.trailing : o),
+                        r(e, t, {
+                            leading: s,
+                            maxWait: t,
+                            trailing: o
+                        })
+                    }
+                }
+                , function(e, t) {
+                    e.exports = function(e) {
+                        return e
+                    }
+                }
+                ])
+            }),
+            window.jscolor || (window.jscolor = function() {
+                var e, n, t, o, s, r, f = {
+                    register: function() {
+                        f.attachDOMReadyEvent(f.init),
+                        f.attachEvent(document, "mousedown", f.onDocumentMouseDown),
+                        f.attachEvent(document, "touchstart", f.onDocumentTouchStart),
+                        f.attachEvent(window, "resize", f.onWindowResize)
+                    },
+                    init: function() {
+                        f.jscolor.lookupClass && f.jscolor.installByClassName(f.jscolor.lookupClass)
+                    },
+                    tryInstallOnElements: function(e, t) {
+                        for (var n = new RegExp("(^|\\s)(" + t + ")(\\s*(\\{[^}]*\\})|\\s|$)","i"), s = 0; s < e.length; s += 1) {
+                            var o;
+                            if (void 0 === e[s].type || "color" != e[s].type.toLowerCase() || !f.isColorAttrSupported)
+                                if (!e[s].jscolor && e[s].className && (o = e[s].className.match(n))) {
+                                    var r = e[s]
+                                      , i = null
+                                      , a = f.getDataAttr(r, "jscolor");
+                                    null !== a ? i = a : o[4] && (i = o[4]);
+                                    var l = {};
+                                    if (i)
+                                        try {
+                                            l = new Function("return (" + i + ")")()
+                                        } catch (e) {
+                                            f.warn("Error parsing jscolor options: " + e + ":\n" + i)
+                                        }
+                                    r.jscolor = new f.jscolor(r,l)
+                                }
+                        }
+                    },
+                    isColorAttrSupported: (r = document.createElement("input"),
+                    !(!r.setAttribute || (r.setAttribute("type", "color"),
+                    "color" != r.type.toLowerCase()))),
+                    isCanvasSupported: (s = document.createElement("canvas"),
+                    !(!s.getContext || !s.getContext("2d"))),
+                    fetchElement: function(e) {
+                        return "string" == typeof e ? document.getElementById(e) : e
+                    },
+                    isElementType: function(e, t) {
+                        return e.nodeName.toLowerCase() === t.toLowerCase()
+                    },
+                    getDataAttr: function(e, t) {
+                        var n = "data-" + t
+                          , s = e.getAttribute(n);
+                        return null !== s ? s : null
+                    },
+                    attachEvent: function(e, t, n) {
+                        e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+                    },
+                    detachEvent: function(e, t, n) {
+                        e.removeEventListener ? e.removeEventListener(t, n, !1) : e.detachEvent && e.detachEvent("on" + t, n)
+                    },
+                    _attachedGroupEvents: {},
+                    attachGroupEvent: function(e, t, n, s) {
+                        f._attachedGroupEvents.hasOwnProperty(e) || (f._attachedGroupEvents[e] = []),
+                        f._attachedGroupEvents[e].push([t, n, s]),
+                        f.attachEvent(t, n, s)
+                    },
+                    detachGroupEvents: function(e) {
+                        if (f._attachedGroupEvents.hasOwnProperty(e)) {
+                            for (var t = 0; t < f._attachedGroupEvents[e].length; t += 1) {
+                                var n = f._attachedGroupEvents[e][t];
+                                f.detachEvent(n[0], n[1], n[2])
+                            }
+                            delete f._attachedGroupEvents[e]
+                        }
+                    },
+                    attachDOMReadyEvent: function(e) {
+                        var t = !1
+                          , n = function() {
+                            t || (t = !0,
+                            e())
+                        };
+                        if ("complete" !== document.readyState) {
+                            if (document.addEventListener)
+                                document.addEventListener("DOMContentLoaded", n, !1),
+                                window.addEventListener("load", n, !1);
+                            else if (document.attachEvent && (document.attachEvent("onreadystatechange", function() {
+                                "complete" === document.readyState && (document.detachEvent("onreadystatechange", arguments.callee),
+                                n())
+                            }),
+                            window.attachEvent("onload", n),
+                            document.documentElement.doScroll && window == window.top)) {
+                                var s = function() {
+                                    if (document.body)
+                                        try {
+                                            document.documentElement.doScroll("left"),
+                                            n()
+                                        } catch (e) {
+                                            setTimeout(s, 1)
+                                        }
+                                };
+                                s()
+                            }
+                        } else
+                            setTimeout(n, 1)
+                    },
+                    warn: function(e) {
+                        window.console && window.console.warn && window.console.warn(e)
+                    },
+                    preventDefault: function(e) {
+                        e.preventDefault && e.preventDefault(),
+                        e.returnValue = !1
+                    },
+                    captureTarget: function(e) {
+                        e.setCapture && (f._capturedTarget = e,
+                        f._capturedTarget.setCapture())
+                    },
+                    releaseTarget: function() {
+                        f._capturedTarget && (f._capturedTarget.releaseCapture(),
+                        f._capturedTarget = null)
+                    },
+                    fireEvent: function(e, t) {
+                        if (e)
+                            if (document.createEvent)
+                                (n = document.createEvent("HTMLEvents")).initEvent(t, !0, !0),
+                                e.dispatchEvent(n);
+                            else if (document.createEventObject) {
+                                var n = document.createEventObject();
+                                e.fireEvent("on" + t, n)
+                            } else
+                                e["on" + t] && e["on" + t]()
+                    },
+                    classNameToList: function(e) {
+                        return e.replace(/^\s+|\s+$/g, "").split(/\s+/)
+                    },
+                    hasClass: function(e, t) {
+                        return !!t && -1 != (" " + e.className.replace(/\s+/g, " ") + " ").indexOf(" " + t + " ")
+                    },
+                    setClass: function(e, t) {
+                        for (var n = f.classNameToList(t), s = 0; s < n.length; s += 1)
+                            f.hasClass(e, n[s]) || (e.className += (e.className ? " " : "") + n[s])
+                    },
+                    unsetClass: function(e, t) {
+                        for (var n = f.classNameToList(t), s = 0; s < n.length; s += 1) {
+                            var o = new RegExp("^\\s*" + n[s] + "\\s*|\\s*" + n[s] + "\\s*$|\\s+" + n[s] + "(\\s+)","g");
+                            e.className = e.className.replace(o, "$1")
+                        }
+                    },
+                    getStyle: function(e) {
+                        return window.getComputedStyle ? window.getComputedStyle(e) : e.currentStyle
+                    },
+                    setStyle: (n = document.createElement("div"),
+                    t = function(e) {
+                        for (var t = 0; t < e.length; t += 1)
+                            if (e[t]in n.style)
+                                return e[t]
+                    }
+                    ,
+                    o = {
+                        borderRadius: t(["borderRadius", "MozBorderRadius", "webkitBorderRadius"]),
+                        boxShadow: t(["boxShadow", "MozBoxShadow", "webkitBoxShadow"])
+                    },
+                    function(e, t, n) {
+                        switch (t.toLowerCase()) {
+                        case "opacity":
+                            var s = Math.round(100 * parseFloat(n));
+                            e.style.opacity = n,
+                            e.style.filter = "alpha(opacity=" + s + ")";
+                            break;
+                        default:
+                            e.style[o[t]] = n
+                        }
+                    }
+                    ),
+                    setBorderRadius: function(e, t) {
+                        f.setStyle(e, "borderRadius", t || "0")
+                    },
+                    setBoxShadow: function(e, t) {
+                        f.setStyle(e, "boxShadow", t || "none")
+                    },
+                    getElementPos: function(e, t) {
+                        var n = 0
+                          , s = 0
+                          , o = e.getBoundingClientRect();
+                        if (n = o.left,
+                        s = o.top,
+                        !t) {
+                            var r = f.getViewPos();
+                            n += r[0],
+                            s += r[1]
+                        }
+                        return [n, s]
+                    },
+                    getElementSize: function(e) {
+                        return [e.offsetWidth, e.offsetHeight]
+                    },
+                    getAbsPointerPos: function(e) {
+                        e || (e = window.event);
+                        var t = 0
+                          , n = 0;
+                        return void 0 !== e.changedTouches && e.changedTouches.length ? (t = e.changedTouches[0].clientX,
+                        n = e.changedTouches[0].clientY) : "number" == typeof e.clientX && (t = e.clientX,
+                        n = e.clientY),
+                        {
+                            x: t,
+                            y: n
+                        }
+                    },
+                    getRelPointerPos: function(e) {
+                        e || (e = window.event);
+                        var t = (e.target || e.srcElement).getBoundingClientRect()
+                          , n = 0
+                          , s = 0;
+                        return void 0 !== e.changedTouches && e.changedTouches.length ? (n = e.changedTouches[0].clientX,
+                        s = e.changedTouches[0].clientY) : "number" == typeof e.clientX && (n = e.clientX,
+                        s = e.clientY),
+                        {
+                            x: n - t.left,
+                            y: s - t.top
+                        }
+                    },
+                    getViewPos: function() {
+                        var e = document.documentElement;
+                        return [(window.pageXOffset || e.scrollLeft) - (e.clientLeft || 0), (window.pageYOffset || e.scrollTop) - (e.clientTop || 0)]
+                    },
+                    getViewSize: function() {
+                        var e = document.documentElement;
+                        return [window.innerWidth || e.clientWidth, window.innerHeight || e.clientHeight]
+                    },
+                    redrawPosition: function() {
+                        if (f.picker && f.picker.owner) {
+                            var e, t, n = f.picker.owner;
+                            t = n.fixed ? (e = f.getElementPos(n.targetElement, !0),
+                            [0, 0]) : (e = f.getElementPos(n.targetElement),
+                            f.getViewPos());
+                            var s, o, r, i = f.getElementSize(n.targetElement), a = f.getViewSize(), l = f.getPickerOuterDims(n);
+                            switch (n.position.toLowerCase()) {
+                            case "left":
+                                o = 0,
+                                r = -(s = 1);
+                                break;
+                            case "right":
+                                o = 0,
+                                r = s = 1;
+                                break;
+                            case "top":
+                                s = 0,
+                                r = -(o = 1);
+                                break;
+                            default:
+                                s = 0,
+                                r = o = 1
+                            }
+                            var c = (i[o] + l[o]) / 2;
+                            if (n.smartPosition)
+                                d = [-t[s] + e[s] + l[s] > a[s] && -t[s] + e[s] + i[s] / 2 > a[s] / 2 && 0 <= e[s] + i[s] - l[s] ? e[s] + i[s] - l[s] : e[s], -t[o] + e[o] + i[o] + l[o] - c + c * r > a[o] ? -t[o] + e[o] + i[o] / 2 > a[o] / 2 && 0 <= e[o] + i[o] - c - c * r ? e[o] + i[o] - c - c * r : e[o] + i[o] - c + c * r : 0 <= e[o] + i[o] - c + c * r ? e[o] + i[o] - c + c * r : e[o] + i[o] - c - c * r];
+                            else
+                                var d = [e[s], e[o] + i[o] - c + c * r];
+                            var h = d[s]
+                              , u = d[o]
+                              , p = n.fixed ? "fixed" : "absolute"
+                              , m = (d[0] + l[0] > e[0] || d[0] < e[0] + i[0]) && d[1] + l[1] < e[1] + i[1];
+                            f._drawPosition(n, h, u, p, m)
+                        }
+                    },
+                    _drawPosition: function(e, t, n, s, o) {
+                        var r = o ? 0 : e.shadowBlur;
+                        f.picker.wrap.style.position = s,
+                        f.picker.wrap.style.left = t + "px",
+                        f.picker.wrap.style.top = n + "px",
+                        f.setBoxShadow(f.picker.boxS, e.shadow ? new f.BoxShadow(0,r,e.shadowBlur,0,e.shadowColor) : null)
+                    },
+                    getPickerDims: function(e) {
+                        var t = !!f.getSliderComponent(e);
+                        return [2 * e.insetWidth + 2 * e.padding + e.width + (t ? 2 * e.insetWidth + f.getPadToSliderPadding(e) + e.sliderSize : 0), 2 * e.insetWidth + 2 * e.padding + e.height + (e.closable ? 2 * e.insetWidth + e.padding + e.buttonHeight : 0)]
+                    },
+                    getPickerOuterDims: function(e) {
+                        var t = f.getPickerDims(e);
+                        return [t[0] + 2 * e.borderWidth, t[1] + 2 * e.borderWidth]
+                    },
+                    getPadToSliderPadding: function(e) {
+                        return Math.max(e.padding, 1.5 * (2 * e.pointerBorderWidth + e.pointerThickness))
+                    },
+                    getPadYComponent: function(e) {
+                        switch (e.mode.charAt(1).toLowerCase()) {
+                        case "v":
+                            return "v"
+                        }
+                        return "s"
+                    },
+                    getSliderComponent: function(e) {
+                        if (2 < e.mode.length)
+                            switch (e.mode.charAt(2).toLowerCase()) {
+                            case "s":
+                                return "s";
+                            case "v":
+                                return "v"
+                            }
+                        return null
+                    },
+                    onDocumentMouseDown: function(e) {
+                        e || (e = window.event);
+                        var t = e.target || e.srcElement;
+                        t._jscLinkedInstance ? t._jscLinkedInstance.showOnClick && t._jscLinkedInstance.show() : t._jscControlName ? f.onControlPointerStart(e, t, t._jscControlName, "mouse") : f.picker && f.picker.owner && f.picker.owner.hide()
+                    },
+                    onDocumentTouchStart: function(e) {
+                        e || (e = window.event);
+                        var t = e.target || e.srcElement;
+                        t._jscLinkedInstance ? t._jscLinkedInstance.showOnClick && t._jscLinkedInstance.show() : t._jscControlName ? f.onControlPointerStart(e, t, t._jscControlName, "touch") : f.picker && f.picker.owner && f.picker.owner.hide()
+                    },
+                    onWindowResize: function(e) {
+                        f.redrawPosition()
+                    },
+                    onParentScroll: function(e) {
+                        f.picker && f.picker.owner && f.picker.owner.hide()
+                    },
+                    _pointerMoveEvent: {
+                        mouse: "mousemove",
+                        touch: "touchmove"
+                    },
+                    _pointerEndEvent: {
+                        mouse: "mouseup",
+                        touch: "touchend"
+                    },
+                    _pointerOrigin: null,
+                    _capturedTarget: null,
+                    onControlPointerStart: function(n, s, o, r) {
+                        var e = s._jscInstance;
+                        f.preventDefault(n),
+                        f.captureTarget(s);
+                        var t = function(e, t) {
+                            f.attachGroupEvent("drag", e, f._pointerMoveEvent[r], f.onDocumentPointerMove(n, s, o, r, t)),
+                            f.attachGroupEvent("drag", e, f._pointerEndEvent[r], f.onDocumentPointerEnd(n, s, o, r))
+                        };
+                        if (t(document, [0, 0]),
+                        window.parent && window.frameElement) {
+                            var i = window.frameElement.getBoundingClientRect()
+                              , a = [-i.left, -i.top];
+                            t(window.parent.window.document, a)
+                        }
+                        var l = f.getAbsPointerPos(n)
+                          , c = f.getRelPointerPos(n);
+                        switch (f._pointerOrigin = {
+                            x: l.x - c.x,
+                            y: l.y - c.y
+                        },
+                        o) {
+                        case "pad":
+                            switch (f.getSliderComponent(e)) {
+                            case "s":
+                                0 === e.hsv[1] && e.fromHSV(null, 100, null);
+                                break;
+                            case "v":
+                                0 === e.hsv[2] && e.fromHSV(null, null, 100)
+                            }
+                            f.setPad(e, n, 0, 0);
+                            break;
+                        case "sld":
+                            f.setSld(e, n, 0)
+                        }
+                        f.dispatchFineChange(e)
+                    },
+                    onDocumentPointerMove: function(e, n, s, t, o) {
+                        return function(e) {
+                            var t = n._jscInstance;
+                            switch (s) {
+                            case "pad":
+                                e || (e = window.event),
+                                f.setPad(t, e, o[0], o[1]),
+                                f.dispatchFineChange(t);
+                                break;
+                            case "sld":
+                                e || (e = window.event),
+                                f.setSld(t, e, o[1]),
+                                f.dispatchFineChange(t)
+                            }
+                        }
+                    },
+                    onDocumentPointerEnd: function(e, n, t, s) {
+                        return function(e) {
+                            var t = n._jscInstance;
+                            f.detachGroupEvents("drag"),
+                            f.releaseTarget(),
+                            f.dispatchChange(t)
+                        }
+                    },
+                    dispatchChange: function(e) {
+                        e.valueElement && f.isElementType(e.valueElement, "input") && f.fireEvent(e.valueElement, "change")
+                    },
+                    dispatchFineChange: function(e) {
+                        e.onFineChange && ("string" == typeof e.onFineChange ? new Function(e.onFineChange) : e.onFineChange).call(e)
+                    },
+                    setPad: function(e, t, n, s) {
+                        var o = f.getAbsPointerPos(t)
+                          , r = n + o.x - f._pointerOrigin.x - e.padding - e.insetWidth
+                          , i = s + o.y - f._pointerOrigin.y - e.padding - e.insetWidth
+                          , a = r * (360 / (e.width - 1))
+                          , l = 100 - i * (100 / (e.height - 1));
+                        switch (f.getPadYComponent(e)) {
+                        case "s":
+                            e.fromHSV(a, l, null, f.leaveSld);
+                            break;
+                        case "v":
+                            e.fromHSV(a, null, l, f.leaveSld)
+                        }
+                    },
+                    setSld: function(e, t, n) {
+                        var s = 100 - (n + f.getAbsPointerPos(t).y - f._pointerOrigin.y - e.padding - e.insetWidth) * (100 / (e.height - 1));
+                        switch (f.getSliderComponent(e)) {
+                        case "s":
+                            e.fromHSV(null, s, null, f.leavePad);
+                            break;
+                        case "v":
+                            e.fromHSV(null, null, s, f.leavePad)
+                        }
+                    },
+                    _vmlNS: "jsc_vml_",
+                    _vmlCSS: "jsc_vml_css_",
+                    _vmlReady: !1,
+                    initVML: function() {
+                        if (!f._vmlReady) {
+                            var e = document;
+                            if (e.namespaces[f._vmlNS] || e.namespaces.add(f._vmlNS, "urn:schemas-microsoft-com:vml"),
+                            !e.styleSheets[f._vmlCSS]) {
+                                var t = ["shape", "shapetype", "group", "background", "path", "formulas", "handles", "fill", "stroke", "shadow", "textbox", "textpath", "imagedata", "line", "polyline", "curve", "rect", "roundrect", "oval", "arc", "image"]
+                                  , n = e.createStyleSheet();
+                                n.owningElement.id = f._vmlCSS;
+                                for (var s = 0; s < t.length; s += 1)
+                                    n.addRule(f._vmlNS + "\\:" + t[s], "behavior:url(#default#VML);")
+                            }
+                            f._vmlReady = !0
+                        }
+                    },
+                    createPalette: function() {
+                        var e = {
+                            elm: null,
+                            draw: null
+                        };
+                        if (f.isCanvasSupported) {
+                            var r = document.createElement("canvas")
+                              , i = r.getContext("2d")
+                              , t = function(e, t, n) {
+                                r.width = e,
+                                r.height = t,
+                                i.clearRect(0, 0, r.width, r.height);
+                                var s = i.createLinearGradient(0, 0, r.width, 0);
+                                s.addColorStop(0, "#F00"),
+                                s.addColorStop(1 / 6, "#FF0"),
+                                s.addColorStop(2 / 6, "#0F0"),
+                                s.addColorStop(.5, "#0FF"),
+                                s.addColorStop(4 / 6, "#00F"),
+                                s.addColorStop(5 / 6, "#F0F"),
+                                s.addColorStop(1, "#F00"),
+                                i.fillStyle = s,
+                                i.fillRect(0, 0, r.width, r.height);
+                                var o = i.createLinearGradient(0, 0, 0, r.height);
+                                switch (n.toLowerCase()) {
+                                case "s":
+                                    o.addColorStop(0, "rgba(255,255,255,0)"),
+                                    o.addColorStop(1, "rgba(255,255,255,1)");
+                                    break;
+                                case "v":
+                                    o.addColorStop(0, "rgba(0,0,0,0)"),
+                                    o.addColorStop(1, "rgba(0,0,0,1)")
+                                }
+                                i.fillStyle = o,
+                                i.fillRect(0, 0, r.width, r.height)
+                            };
+                            e.elm = r,
+                            e.draw = t
+                        } else {
+                            f.initVML();
+                            var s = document.createElement("div");
+                            s.style.position = "relative",
+                            s.style.overflow = "hidden";
+                            var o = document.createElement(f._vmlNS + ":fill");
+                            o.type = "gradient",
+                            o.method = "linear",
+                            o.angle = "90",
+                            o.colors = "16.67% #F0F, 33.33% #00F, 50% #0FF, 66.67% #0F0, 83.33% #FF0";
+                            var a = document.createElement(f._vmlNS + ":rect");
+                            a.style.position = "absolute",
+                            a.style.left = "-1px",
+                            a.style.top = "-1px",
+                            a.stroked = !1,
+                            a.appendChild(o),
+                            s.appendChild(a);
+                            var l = document.createElement(f._vmlNS + ":fill");
+                            l.type = "gradient",
+                            l.method = "linear",
+                            l.angle = "180",
+                            l.opacity = "0";
+                            var c = document.createElement(f._vmlNS + ":rect");
+                            c.style.position = "absolute",
+                            c.style.left = "-1px",
+                            c.style.top = "-1px",
+                            c.stroked = !1,
+                            c.appendChild(l),
+                            s.appendChild(c);
+                            t = function(e, t, n) {
+                                switch (s.style.width = e + "px",
+                                s.style.height = t + "px",
+                                a.style.width = c.style.width = e + 1 + "px",
+                                a.style.height = c.style.height = t + 1 + "px",
+                                o.color = "#F00",
+                                o.color2 = "#F00",
+                                n.toLowerCase()) {
+                                case "s":
+                                    l.color = l.color2 = "#FFF";
+                                    break;
+                                case "v":
+                                    l.color = l.color2 = "#000"
+                                }
+                            }
+                            ;
+                            e.elm = s,
+                            e.draw = t
+                        }
+                        return e
+                    },
+                    createSliderGradient: function() {
+                        var e = {
+                            elm: null,
+                            draw: null
+                        };
+                        if (f.isCanvasSupported) {
+                            var r = document.createElement("canvas")
+                              , i = r.getContext("2d")
+                              , t = function(e, t, n, s) {
+                                r.width = e,
+                                r.height = t,
+                                i.clearRect(0, 0, r.width, r.height);
+                                var o = i.createLinearGradient(0, 0, 0, r.height);
+                                o.addColorStop(0, n),
+                                o.addColorStop(1, s),
+                                i.fillStyle = o,
+                                i.fillRect(0, 0, r.width, r.height)
+                            };
+                            e.elm = r,
+                            e.draw = t
+                        } else {
+                            f.initVML();
+                            var o = document.createElement("div");
+                            o.style.position = "relative",
+                            o.style.overflow = "hidden";
+                            var a = document.createElement(f._vmlNS + ":fill");
+                            a.type = "gradient",
+                            a.method = "linear",
+                            a.angle = "180";
+                            var l = document.createElement(f._vmlNS + ":rect");
+                            l.style.position = "absolute",
+                            l.style.left = "-1px",
+                            l.style.top = "-1px",
+                            l.stroked = !1,
+                            l.appendChild(a),
+                            o.appendChild(l);
+                            t = function(e, t, n, s) {
+                                o.style.width = e + "px",
+                                o.style.height = t + "px",
+                                l.style.width = e + 1 + "px",
+                                l.style.height = t + 1 + "px",
+                                a.color = n,
+                                a.color2 = s
+                            }
+                            ;
+                            e.elm = o,
+                            e.draw = t
+                        }
+                        return e
+                    },
+                    leaveValue: 1,
+                    leaveStyle: 2,
+                    leavePad: 4,
+                    leaveSld: 8,
+                    BoxShadow: (e = function(e, t, n, s, o, r) {
+                        this.hShadow = e,
+                        this.vShadow = t,
+                        this.blur = n,
+                        this.spread = s,
+                        this.color = o,
+                        this.inset = !!r
+                    }
+                    ,
+                    e.prototype.toString = function() {
+                        var e = [Math.round(this.hShadow) + "px", Math.round(this.vShadow) + "px", Math.round(this.blur) + "px", Math.round(this.spread) + "px", this.color];
+                        return this.inset && e.push("inset"),
+                        e.join(" ")
+                    }
+                    ,
+                    e),
+                    jscolor: function(e, t) {
+                        for (var n in this.value = null,
+                        this.valueElement = e,
+                        this.styleElement = e,
+                        this.required = !0,
+                        this.refine = !0,
+                        this.hash = !1,
+                        this.uppercase = !0,
+                        this.onFineChange = null,
+                        this.activeClass = "jscolor-active",
+                        this.overwriteImportant = !1,
+                        this.minS = 0,
+                        this.maxS = 100,
+                        this.minV = 0,
+                        this.maxV = 100,
+                        this.hsv = [0, 0, 100],
+                        this.rgb = [255, 255, 255],
+                        this.width = 181,
+                        this.height = 101,
+                        this.showOnClick = !0,
+                        this.mode = "HSV",
+                        this.position = "bottom",
+                        this.smartPosition = !0,
+                        this.sliderSize = 16,
+                        this.crossSize = 8,
+                        this.closable = !1,
+                        this.closeText = "Close",
+                        this.buttonColor = "#000000",
+                        this.buttonHeight = 18,
+                        this.padding = 12,
+                        this.backgroundColor = "#FFFFFF",
+                        this.borderWidth = 1,
+                        this.borderColor = "#BBBBBB",
+                        this.borderRadius = 8,
+                        this.insetWidth = 1,
+                        this.insetColor = "#BBBBBB",
+                        this.shadow = !0,
+                        this.shadowBlur = 15,
+                        this.shadowColor = "rgba(0,0,0,0.2)",
+                        this.pointerColor = "#4C4C4C",
+                        this.pointerBorderColor = "#FFFFFF",
+                        this.pointerBorderWidth = 1,
+                        this.pointerThickness = 2,
+                        this.zIndex = 1e3,
+                        this.container = null,
+                        t)
+                            t.hasOwnProperty(n) && (this[n] = t[n]);
+                        function d(e, t, n) {
+                            var s = n / 100 * 255;
+                            if (null === e)
+                                return [s, s, s];
+                            e /= 60,
+                            t /= 100;
+                            var o = Math.floor(e)
+                              , r = s * (1 - t)
+                              , i = s * (1 - t * (o % 2 ? e - o : 1 - (e - o)));
+                            switch (o) {
+                            case 6:
+                            case 0:
+                                return [s, i, r];
+                            case 1:
+                                return [i, s, r];
+                            case 2:
+                                return [r, s, i];
+                            case 3:
+                                return [r, i, s];
+                            case 4:
+                                return [i, r, s];
+                            case 5:
+                                return [s, r, i]
+                            }
+                        }
+                        function s() {
+                            h._processParentElementsInDOM(),
+                            f.picker || (f.picker = {
+                                owner: null,
+                                wrap: document.createElement("div"),
+                                box: document.createElement("div"),
+                                boxS: document.createElement("div"),
+                                boxB: document.createElement("div"),
+                                pad: document.createElement("div"),
+                                padB: document.createElement("div"),
+                                padM: document.createElement("div"),
+                                padPal: f.createPalette(),
+                                cross: document.createElement("div"),
+                                crossBY: document.createElement("div"),
+                                crossBX: document.createElement("div"),
+                                crossLY: document.createElement("div"),
+                                crossLX: document.createElement("div"),
+                                sld: document.createElement("div"),
+                                sldB: document.createElement("div"),
+                                sldM: document.createElement("div"),
+                                sldGrad: f.createSliderGradient(),
+                                sldPtrS: document.createElement("div"),
+                                sldPtrIB: document.createElement("div"),
+                                sldPtrMB: document.createElement("div"),
+                                sldPtrOB: document.createElement("div"),
+                                btn: document.createElement("div"),
+                                btnT: document.createElement("span")
+                            },
+                            f.picker.pad.appendChild(f.picker.padPal.elm),
+                            f.picker.padB.appendChild(f.picker.pad),
+                            f.picker.cross.appendChild(f.picker.crossBY),
+                            f.picker.cross.appendChild(f.picker.crossBX),
+                            f.picker.cross.appendChild(f.picker.crossLY),
+                            f.picker.cross.appendChild(f.picker.crossLX),
+                            f.picker.padB.appendChild(f.picker.cross),
+                            f.picker.box.appendChild(f.picker.padB),
+                            f.picker.box.appendChild(f.picker.padM),
+                            f.picker.sld.appendChild(f.picker.sldGrad.elm),
+                            f.picker.sldB.appendChild(f.picker.sld),
+                            f.picker.sldB.appendChild(f.picker.sldPtrOB),
+                            f.picker.sldPtrOB.appendChild(f.picker.sldPtrMB),
+                            f.picker.sldPtrMB.appendChild(f.picker.sldPtrIB),
+                            f.picker.sldPtrIB.appendChild(f.picker.sldPtrS),
+                            f.picker.box.appendChild(f.picker.sldB),
+                            f.picker.box.appendChild(f.picker.sldM),
+                            f.picker.btn.appendChild(f.picker.btnT),
+                            f.picker.box.appendChild(f.picker.btn),
+                            f.picker.boxB.appendChild(f.picker.box),
+                            f.picker.wrap.appendChild(f.picker.boxS),
+                            f.picker.wrap.appendChild(f.picker.boxB));
+                            var e, t, n = f.picker, s = !!f.getSliderComponent(h), o = f.getPickerDims(h), r = 2 * h.pointerBorderWidth + h.pointerThickness + 2 * h.crossSize, i = f.getPadToSliderPadding(h), a = Math.min(h.borderRadius, Math.round(h.padding * Math.PI));
+                            n.wrap.style.clear = "both",
+                            n.wrap.style.width = o[0] + 2 * h.borderWidth + "px",
+                            n.wrap.style.height = o[1] + 2 * h.borderWidth + "px",
+                            n.wrap.style.zIndex = h.zIndex,
+                            n.box.style.width = o[0] + "px",
+                            n.box.style.height = o[1] + "px",
+                            n.boxS.style.position = "absolute",
+                            n.boxS.style.left = "0",
+                            n.boxS.style.top = "0",
+                            n.boxS.style.width = "100%",
+                            n.boxS.style.height = "100%",
+                            f.setBorderRadius(n.boxS, a + "px"),
+                            n.boxB.style.position = "relative",
+                            n.boxB.style.border = h.borderWidth + "px solid",
+                            n.boxB.style.borderColor = h.borderColor,
+                            n.boxB.style.background = h.backgroundColor,
+                            f.setBorderRadius(n.boxB, a + "px"),
+                            n.padM.style.background = n.sldM.style.background = "#FFF",
+                            f.setStyle(n.padM, "opacity", "0"),
+                            f.setStyle(n.sldM, "opacity", "0"),
+                            n.pad.style.position = "relative",
+                            n.pad.style.width = h.width + "px",
+                            n.pad.style.height = h.height + "px",
+                            n.padPal.draw(h.width, h.height, f.getPadYComponent(h)),
+                            n.padB.style.position = "absolute",
+                            n.padB.style.left = h.padding + "px",
+                            n.padB.style.top = h.padding + "px",
+                            n.padB.style.border = h.insetWidth + "px solid",
+                            n.padB.style.borderColor = h.insetColor,
+                            n.padM._jscInstance = h,
+                            n.padM._jscControlName = "pad",
+                            n.padM.style.position = "absolute",
+                            n.padM.style.left = "0",
+                            n.padM.style.top = "0",
+                            n.padM.style.width = h.padding + 2 * h.insetWidth + h.width + i / 2 + "px",
+                            n.padM.style.height = o[1] + "px",
+                            n.padM.style.cursor = "crosshair",
+                            n.cross.style.position = "absolute",
+                            n.cross.style.left = n.cross.style.top = "0",
+                            n.cross.style.width = n.cross.style.height = r + "px",
+                            n.crossBY.style.position = n.crossBX.style.position = "absolute",
+                            n.crossBY.style.background = n.crossBX.style.background = h.pointerBorderColor,
+                            n.crossBY.style.width = n.crossBX.style.height = 2 * h.pointerBorderWidth + h.pointerThickness + "px",
+                            n.crossBY.style.height = n.crossBX.style.width = r + "px",
+                            n.crossBY.style.left = n.crossBX.style.top = Math.floor(r / 2) - Math.floor(h.pointerThickness / 2) - h.pointerBorderWidth + "px",
+                            n.crossBY.style.top = n.crossBX.style.left = "0",
+                            n.crossLY.style.position = n.crossLX.style.position = "absolute",
+                            n.crossLY.style.background = n.crossLX.style.background = h.pointerColor,
+                            n.crossLY.style.height = n.crossLX.style.width = r - 2 * h.pointerBorderWidth + "px",
+                            n.crossLY.style.width = n.crossLX.style.height = h.pointerThickness + "px",
+                            n.crossLY.style.left = n.crossLX.style.top = Math.floor(r / 2) - Math.floor(h.pointerThickness / 2) + "px",
+                            n.crossLY.style.top = n.crossLX.style.left = h.pointerBorderWidth + "px",
+                            n.sld.style.overflow = "hidden",
+                            n.sld.style.width = h.sliderSize + "px",
+                            n.sld.style.height = h.height + "px",
+                            n.sldGrad.draw(h.sliderSize, h.height, "#000", "#000"),
+                            n.sldB.style.display = s ? "block" : "none",
+                            n.sldB.style.position = "absolute",
+                            n.sldB.style.right = h.padding + "px",
+                            n.sldB.style.top = h.padding + "px",
+                            n.sldB.style.border = h.insetWidth + "px solid",
+                            n.sldB.style.borderColor = h.insetColor,
+                            n.sldM._jscInstance = h,
+                            n.sldM._jscControlName = "sld",
+                            n.sldM.style.display = s ? "block" : "none",
+                            n.sldM.style.position = "absolute",
+                            n.sldM.style.right = "0",
+                            n.sldM.style.top = "0",
+                            n.sldM.style.width = h.sliderSize + i / 2 + h.padding + 2 * h.insetWidth + "px",
+                            n.sldM.style.height = o[1] + "px",
+                            n.sldM.style.cursor = "default",
+                            n.sldPtrIB.style.border = n.sldPtrOB.style.border = h.pointerBorderWidth + "px solid " + h.pointerBorderColor,
+                            n.sldPtrOB.style.position = "absolute",
+                            n.sldPtrOB.style.left = -(2 * h.pointerBorderWidth + h.pointerThickness) + "px",
+                            n.sldPtrOB.style.top = "0",
+                            n.sldPtrMB.style.border = h.pointerThickness + "px solid " + h.pointerColor,
+                            n.sldPtrS.style.width = h.sliderSize + "px",
+                            n.sldPtrS.style.height = p + "px",
+                            n.btn.style.display = h.closable ? "block" : "none",
+                            n.btn.style.position = "absolute",
+                            n.btn.style.left = h.padding + "px",
+                            n.btn.style.bottom = h.padding + "px",
+                            n.btn.style.padding = "0 15px",
+                            n.btn.style.height = h.buttonHeight + "px",
+                            n.btn.style.border = h.insetWidth + "px solid",
+                            e = h.insetColor.split(/\s+/),
+                            t = e.length < 2 ? e[0] : e[1] + " " + e[0] + " " + e[0] + " " + e[1],
+                            n.btn.style.borderColor = t,
+                            n.btn.style.color = h.buttonColor,
+                            n.btn.style.font = "12px sans-serif",
+                            n.btn.style.textAlign = "center";
+                            try {
+                                n.btn.style.cursor = "pointer"
+                            } catch (e) {
+                                n.btn.style.cursor = "hand"
+                            }
+                            n.btn.onmousedown = function() {
+                                h.hide()
+                            }
+                            ,
+                            n.btnT.style.lineHeight = h.buttonHeight + "px",
+                            n.btnT.innerHTML = "",
+                            n.btnT.appendChild(document.createTextNode(h.closeText)),
+                            l(),
+                            c(),
+                            f.picker.owner && f.picker.owner !== h && f.unsetClass(f.picker.owner.targetElement, h.activeClass),
+                            f.picker.owner = h,
+                            f.isElementType(u, "body") ? f.redrawPosition() : f._drawPosition(h, 0, 0, "relative", !1),
+                            n.wrap.parentNode != u && u.appendChild(n.wrap),
+                            f.setClass(h.targetElement, h.activeClass)
+                        }
+                        function l() {
+                            switch (f.getPadYComponent(h)) {
+                            case "s":
+                                var e = 1;
+                                break;
+                            case "v":
+                                e = 2
+                            }
+                            var t = Math.round(h.hsv[0] / 360 * (h.width - 1))
+                              , n = Math.round((1 - h.hsv[e] / 100) * (h.height - 1))
+                              , s = 2 * h.pointerBorderWidth + h.pointerThickness + 2 * h.crossSize
+                              , o = -Math.floor(s / 2);
+                            switch (f.picker.cross.style.left = t + o + "px",
+                            f.picker.cross.style.top = n + o + "px",
+                            f.getSliderComponent(h)) {
+                            case "s":
+                                var r = d(h.hsv[0], 100, h.hsv[2])
+                                  , i = d(h.hsv[0], 0, h.hsv[2])
+                                  , a = "rgb(" + Math.round(r[0]) + "," + Math.round(r[1]) + "," + Math.round(r[2]) + ")"
+                                  , l = "rgb(" + Math.round(i[0]) + "," + Math.round(i[1]) + "," + Math.round(i[2]) + ")";
+                                f.picker.sldGrad.draw(h.sliderSize, h.height, a, l);
+                                break;
+                            case "v":
+                                var c = d(h.hsv[0], h.hsv[1], 100);
+                                a = "rgb(" + Math.round(c[0]) + "," + Math.round(c[1]) + "," + Math.round(c[2]) + ")",
+                                l = "#000";
+                                f.picker.sldGrad.draw(h.sliderSize, h.height, a, l)
+                            }
+                        }
+                        function c() {
+                            var e = f.getSliderComponent(h);
+                            if (e) {
+                                switch (e) {
+                                case "s":
+                                    var t = 1;
+                                    break;
+                                case "v":
+                                    t = 2
+                                }
+                                var n = Math.round((1 - h.hsv[t] / 100) * (h.height - 1));
+                                f.picker.sldPtrOB.style.top = n - (2 * h.pointerBorderWidth + h.pointerThickness) - Math.floor(p / 2) + "px"
+                            }
+                        }
+                        function o() {
+                            return f.picker && f.picker.owner === h
+                        }
+                        if (this.hide = function() {
+                            o() && (f.unsetClass(h.targetElement, h.activeClass),
+                            f.picker.wrap.parentNode.removeChild(f.picker.wrap),
+                            delete f.picker.owner)
+                        }
+                        ,
+                        this.show = function() {
+                            s()
+                        }
+                        ,
+                        this.redraw = function() {
+                            o() && s()
+                        }
+                        ,
+                        this.importColor = function() {
+                            this.valueElement && f.isElementType(this.valueElement, "input") ? this.refine ? !this.required && /^\s*$/.test(this.valueElement.value) ? (this.valueElement.value = "",
+                            this.styleElement && (this.styleElement.style.backgroundImage = this.styleElement._jscOrigStyle.backgroundImage,
+                            this.styleElement.style.backgroundColor = this.styleElement._jscOrigStyle.backgroundColor,
+                            this.styleElement.style.color = this.styleElement._jscOrigStyle.color),
+                            this.exportColor(f.leaveValue | f.leaveStyle)) : this.fromString(this.valueElement.value) || this.exportColor() : this.fromString(this.valueElement.value, f.leaveValue) || (this.styleElement && (this.styleElement.style.backgroundImage = this.styleElement._jscOrigStyle.backgroundImage,
+                            this.styleElement.style.backgroundColor = this.styleElement._jscOrigStyle.backgroundColor,
+                            this.styleElement.style.color = this.styleElement._jscOrigStyle.color),
+                            this.exportColor(f.leaveValue | f.leaveStyle)) : this.exportColor()
+                        }
+                        ,
+                        this.exportColor = function(e) {
+                            if (!(e & f.leaveValue) && this.valueElement) {
+                                var t = this.toString();
+                                this.uppercase && (t = t.toUpperCase()),
+                                this.hash && (t = "#" + t),
+                                f.isElementType(this.valueElement, "input") ? this.valueElement.value = t : this.valueElement.innerHTML = t
+                            }
+                            if (!(e & f.leaveStyle) && this.styleElement) {
+                                var n = "#" + this.toString()
+                                  , s = this.isLight() ? "#000" : "#FFF";
+                                this.styleElement.style.backgroundImage = "none",
+                                this.styleElement.style.backgroundColor = n,
+                                this.styleElement.style.color = s,
+                                this.overwriteImportant && this.styleElement.setAttribute("style", "background: " + n + " !important; color: " + s + " !important;")
+                            }
+                            e & f.leavePad || !o() || l(),
+                            e & f.leaveSld || !o() || c()
+                        }
+                        ,
+                        this.fromHSV = function(e, t, n, s) {
+                            if (null !== e) {
+                                if (isNaN(e))
+                                    return !1;
+                                e = Math.max(0, Math.min(360, e))
+                            }
+                            if (null !== t) {
+                                if (isNaN(t))
+                                    return !1;
+                                t = Math.max(0, Math.min(100, this.maxS, t), this.minS)
+                            }
+                            if (null !== n) {
+                                if (isNaN(n))
+                                    return !1;
+                                n = Math.max(0, Math.min(100, this.maxV, n), this.minV)
+                            }
+                            this.rgb = d(null === e ? this.hsv[0] : this.hsv[0] = e, null === t ? this.hsv[1] : this.hsv[1] = t, null === n ? this.hsv[2] : this.hsv[2] = n),
+                            this.exportColor(s)
+                        }
+                        ,
+                        this.fromRGB = function(e, t, n, s) {
+                            if (null !== e) {
+                                if (isNaN(e))
+                                    return !1;
+                                e = Math.max(0, Math.min(255, e))
+                            }
+                            if (null !== t) {
+                                if (isNaN(t))
+                                    return !1;
+                                t = Math.max(0, Math.min(255, t))
+                            }
+                            if (null !== n) {
+                                if (isNaN(n))
+                                    return !1;
+                                n = Math.max(0, Math.min(255, n))
+                            }
+                            var o = function(e, t, n) {
+                                e /= 255,
+                                t /= 255,
+                                n /= 255;
+                                var s = Math.min(Math.min(e, t), n)
+                                  , o = Math.max(Math.max(e, t), n)
+                                  , r = o - s;
+                                if (0 === r)
+                                    return [null, 0, 100 * o];
+                                var i = e === s ? 3 + (n - t) / r : t === s ? 5 + (e - n) / r : 1 + (t - e) / r;
+                                return [60 * (6 === i ? 0 : i), r / o * 100, 100 * o]
+                            }(null === e ? this.rgb[0] : e, null === t ? this.rgb[1] : t, null === n ? this.rgb[2] : n);
+                            null !== o[0] && (this.hsv[0] = Math.max(0, Math.min(360, o[0]))),
+                            0 !== o[2] && (this.hsv[1] = null === o[1] ? null : Math.max(0, this.minS, Math.min(100, this.maxS, o[1]))),
+                            this.hsv[2] = null === o[2] ? null : Math.max(0, this.minV, Math.min(100, this.maxV, o[2]));
+                            var r = d(this.hsv[0], this.hsv[1], this.hsv[2]);
+                            this.rgb[0] = r[0],
+                            this.rgb[1] = r[1],
+                            this.rgb[2] = r[2],
+                            this.exportColor(s)
+                        }
+                        ,
+                        this.fromString = function(e, t) {
+                            var n;
+                            if (n = e.match(/^\W*([0-9A-F]{3}([0-9A-F]{3})?)\W*$/i))
+                                return 6 === n[1].length ? this.fromRGB(parseInt(n[1].substr(0, 2), 16), parseInt(n[1].substr(2, 2), 16), parseInt(n[1].substr(4, 2), 16), t) : this.fromRGB(parseInt(n[1].charAt(0) + n[1].charAt(0), 16), parseInt(n[1].charAt(1) + n[1].charAt(1), 16), parseInt(n[1].charAt(2) + n[1].charAt(2), 16), t),
+                                !0;
+                            if (n = e.match(/^\W*rgba?\(([^)]*)\)\W*$/i)) {
+                                var s, o, r, i = n[1].split(","), a = /^\s*(\d*)(\.\d+)?\s*$/;
+                                if (3 <= i.length && (s = i[0].match(a)) && (o = i[1].match(a)) && (r = i[2].match(a))) {
+                                    var l = parseFloat((s[1] || "0") + (s[2] || ""))
+                                      , c = parseFloat((o[1] || "0") + (o[2] || ""))
+                                      , d = parseFloat((r[1] || "0") + (r[2] || ""));
+                                    return this.fromRGB(l, c, d, t),
+                                    !0
+                                }
+                            }
+                            return !1
+                        }
+                        ,
+                        this.toString = function() {
+                            return (256 | Math.round(this.rgb[0])).toString(16).substr(1) + (256 | Math.round(this.rgb[1])).toString(16).substr(1) + (256 | Math.round(this.rgb[2])).toString(16).substr(1)
+                        }
+                        ,
+                        this.toHEXString = function() {
+                            return "#" + this.toString().toUpperCase()
+                        }
+                        ,
+                        this.toRGBString = function() {
+                            return "rgb(" + Math.round(this.rgb[0]) + "," + Math.round(this.rgb[1]) + "," + Math.round(this.rgb[2]) + ")"
+                        }
+                        ,
+                        this.isLight = function() {
+                            return 127.5 < .213 * this.rgb[0] + .715 * this.rgb[1] + .072 * this.rgb[2]
+                        }
+                        ,
+                        this._processParentElementsInDOM = function() {
+                            if (!this._linkedElementsProcessed) {
+                                this._linkedElementsProcessed = !0;
+                                var e = this.targetElement;
+                                do {
+                                    var t = f.getStyle(e);
+                                    t && "fixed" === t.position.toLowerCase() && (this.fixed = !0),
+                                    e !== this.targetElement && (e._jscEventsAttached || (f.attachEvent(e, "scroll", f.onParentScroll),
+                                    e._jscEventsAttached = !0))
+                                } while ((e = e.parentNode) && !f.isElementType(e, "body"))
+                            }
+                        }
+                        ,
+                        "string" == typeof e) {
+                            var r = e
+                              , i = document.getElementById(r);
+                            i ? this.targetElement = i : f.warn("Could not find target element with ID '" + r + "'")
+                        } else
+                            e ? this.targetElement = e : f.warn("Invalid target element: '" + e + "'");
+                        if (this.targetElement._jscLinkedInstance)
+                            f.warn("Cannot link jscolor twice to the same element. Skipping.");
+                        else {
+                            (this.targetElement._jscLinkedInstance = this).valueElement = f.fetchElement(this.valueElement),
+                            this.styleElement = f.fetchElement(this.styleElement);
+                            var h = this
+                              , u = this.container ? f.fetchElement(this.container) : document.getElementsByTagName("body")[0]
+                              , p = 3;
+                            if (f.isElementType(this.targetElement, "button"))
+                                if (this.targetElement.onclick) {
+                                    var a = this.targetElement.onclick;
+                                    this.targetElement.onclick = function(e) {
+                                        return a.call(this, e),
+                                        !1
+                                    }
+                                } else
+                                    this.targetElement.onclick = function() {
+                                        return !1
+                                    }
+                                    ;
+                            if (this.valueElement && f.isElementType(this.valueElement, "input")) {
+                                var m = function() {
+                                    h.fromString(h.valueElement.value, f.leaveValue),
+                                    f.dispatchFineChange(h)
+                                };
+                                f.attachEvent(this.valueElement, "keyup", m),
+                                f.attachEvent(this.valueElement, "input", m),
+                                f.attachEvent(this.valueElement, "blur", function() {
+                                    h.importColor()
+                                }),
+                                this.valueElement.setAttribute("autocomplete", "off")
+                            }
+                            this.styleElement && (this.styleElement._jscOrigStyle = {
+                                backgroundImage: this.styleElement.style.backgroundImage,
+                                backgroundColor: this.styleElement.style.backgroundColor,
+                                color: this.styleElement.style.color
+                            }),
+                            this.value ? this.fromString(this.value) || this.exportColor() : this.importColor()
+                        }
+                    }
+                };
+                return f.jscolor.lookupClass = "jscolor",
+                f.jscolor.installByClassName = function(e) {
+                    var t = document.getElementsByTagName("input")
+                      , n = document.getElementsByTagName("button");
+                    f.tryInstallOnElements(t, e),
+                    f.tryInstallOnElements(n, e)
+                }
+                ,
+                f.register(),
+                f.jscolor
+            }());
+            var cssans = {
+                playground: document.getElementById("playground"),
+                codepen: document.getElementById("codepen"),
+                controls: {
+                    text: document.getElementById("ctrl-text"),
+                    fontsize: document.getElementById("ctrl-fontsize"),
+                    colorInputs: document.getElementsByClassName("jscolor")
+                },
+                checkVarsSupport: function() {
+                    var e = "rgb(255, 198, 0)"
+                      , t = document.createElement("span");
+                    t.style.setProperty("--color", e),
+                    t.style.setProperty("background", "var(--color)"),
+                    document.body.appendChild(t);
+                    var n = getComputedStyle(t).backgroundColor === e;
+                    return document.body.removeChild(t),
+                    n
+                },
+                setText: function() {
+                    var e = cssans.controls.text.value.trim();
+                    CSSans(cssans.playground, e),
+                    "CSSans Pro" == e || "" == e ? window.history.pushState("Initial", "", "/") : window.history.pushState("Text Change", e, "/?t=" + e),
+                    cssans.setCode()
+                },
+                setTextFromParam: function() {
+                    var e = getParam("t");
+                    e && (cssans.controls.text.value = e,
+                    cssans.setText())
+                },
+                setFontSize: function() {
+                    cssans.playground.style.fontSize = cssans.controls.fontsize.value + "px",
+                    cssans.setCode()
+                },
+                setColor: function(e) {
+                    var t = Math.round(e.rgb[0]) + ", " + Math.round(e.rgb[1]) + ", " + Math.round(e.rgb[2]);
+                    cssans.playground.style.setProperty(e.valueElement.dataset.variable, t),
+                    e.valueElement.setAttribute("data-rgb", t),
+                    cssans.setCode()
+                },
+                setCode: function() {
+                    for (var e = "  font-size: " + cssans.controls.fontsize.value + "px;\n", t = "", n = {}, s = 0; s < cssans.controls.colorInputs.length; s++) {
+                        var o = cssans.controls.colorInputs[s]
+                          , r = o.dataset.variable
+                          , i = o.dataset.rgb;
+                        t += "  " + r + ": " + i + ";\n",
+                        n[r] = i
+                    }
+                    var a = {
+                        title: "CSSans Pro",
+                        description: "Learn more about CSSans Pro at [https://cssans.pro](https://cssans.pro).",
+                        html: '\x3c!--\n  Website: https://cssans.pro\n  Documentation: https://github.com/ZeroSpree/CSSans.Pro#readme \n  Follow me: https://codepen.io/zerospree/\n--\x3e\n<div class="cssans cssans--center">\n' + CSSans(cssans.playground, cssans.controls.text.value.trim()) + "\n</div>",
+                        css: "/* Uses https://cssans.pro/dist/cssans.min.css */ \n\n.cssans {\n" + e + t + "  --cssans-letter-spacing: 0.1em;\n  --cssans-word-spacing: 1em;\n  --cssans-line-height: 1.1em;\n}",
+                        layout: "top",
+                        tags: ["cssans pro", "css", "font"],
+                        css_external: "https://cssans.pro/dist/cssans.min.css"
+                    };
+                    cssans.codepen.value = JSON.stringify(a).replace(/"/g, "&​quot;").replace(/'/g, "&apos;"),
+                    cssans.checkVarsSupport() || cssVars({
+                        variables: n
+                    })
+                },
+                inview: function() {
+                    inView(".js--inview").on("enter", function(e) {
+                        e.classList.add("is-inview")
+                    })
+                },
+                lettersInview: function() {
+                    inView(".specimen .cssans__word").on("enter", function(e) {
+                        e.classList.add("is-inview")
+                    })
+                },
+                init: function() {
+                    cssans.controls.text.addEventListener("input", cssans.setText),
+                    cssans.controls.fontsize.addEventListener("input", cssans.setFontSize),
+                    cssans.controls.fontsize.addEventListener("change", cssans.setFontSize),
+                    cssans.setCode(),
+                    cssans.setTextFromParam(),
+                    cssans.setText(),
+                    cssans.setFontSize(),
+                    cssans.inview();
+                    for (var e = document.querySelectorAll(".cssans"), t = 0; t < e.length; t++) {
+                        var n = e[t];
+                        CSSans(n, n.innerText)
+                    }
+                    cssans.lettersInview()
+                }
+            };
+            cssans.init();
+		</script>
+
+   
+    </body>
+</html>
