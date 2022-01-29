@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>图片全屏预览网页组件lumos.js www.bootstrapmb.com</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/flatly/bootstrap.min.css">
+        
+        <style>
+            main {
+                max-width: 1000px;
+                margin: 100px auto
+            }
+			
+			
+			
+			
+			:root {
+    --lumos-background: rgba(.8,.8,.8,.7);
+    --lumos-padding: 2rem;
+    --lumos-child-margin-top: 1rem;
+    --lumos-transition-duration: 250ms
+}
+
+img[data-action=lumos] {
+    cursor: zoom-in
+}
+
+#lumos-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: var(--lumos-padding);
+    cursor: zoom-out;
+    user-select: none;
+    transition: all var(--lumos-transition-duration) ease-in-out;
+    transform: scale(0);
+    will-change: auto;
+    opacity: 0;
+    background: var(--lumos-background)
+}
+
+#lumos-container.visible {
+    animation-name: animate-in;
+    animation-duration: var(--lumos-transition-duration);
+    animation-fill-mode: forwards;
+    z-index: 999
+}
+
+#lumos-container.hidden {
+    animation: animate-out;
+    animation-duration: var(--lumos-transition-duration);
+    animation-fill-mode: forwards
+}
+
+#lumos-figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0
+}
+
+#lumos-image {
+    overflow: hidden;
+    object-fit: contain;
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
+    height: auto
+}
+
+#lumos-caption {
+    margin-top: var(--lumos-child-margin-top);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px black
+}
+
+#lumos-link {
+    margin-top: var(--lumos-child-margin-top)
+}
+
+@keyframes animate-in {
+    0% {
+        transform: scale(0);
+        opacity: 0
+    }
+
+    1% {
+        transform: scale(0.9);
+        opacity: 0
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes animate-out {
+    0% {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    99% {
+        transform: scale(0.9);
+        opacity: 0
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0
+    }
+}
+
+
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <h1>图片全屏预览</h1>
+            <img src="img/lumos.1.jfif" alt="Portrait de la planète Mars" 
+			data-action="lumos" data-lumos-src="img/lumos.2.jfif" 
+			data-lumos-caption="A simple lightweight image lightbox library for displaying images in a lightbox with smooth CSS animations and custom captions." class="mx-auto"/>
+</div></main>
+<template id="lumos-template">
+    <div id="lumos-container">
+        <figure id="lumos-figure">
+            <img src="" alt="" id="lumos-image">
+            <figcaption id="lumos-caption"></figcaption>
+        </figure>
+    </div>
+</template>
+<script >
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.appendChild(document.getElementById("lumos-template").content);
+
+    const images = document.querySelectorAll('[data-action="lumos"]'),
+          lumosContainer = document.getElementById("lumos-container"),
+          lumosImage = document.getElementById("lumos-image"),
+          lumosCaption = document.getElementById("lumos-caption"),
+
+          animationDuration = 250;
+
+    function hide() {
+        isVisible() && (lumosContainer.classList.add("hidden"), setTimeout(() => {
+            lumosContainer.classList.remove("visible");
+            lumosImage.attributes.src.value = "";
+            if (lumosCaption !== null) {
+                lumosCaption.innerHTML = "";
+            }
+        }, animationDuration));
+    }
+
+    function isVisible() {
+        return lumosContainer.classList.contains("visible");
+    }
+
+    images.forEach(image => {
+        image.addEventListener("click", () => {
+            lumosImage.attributes.src.value = void 0 === image.attributes["data-lumos-src"] ? image.attributes.src.value : image.attributes["data-lumos-src"].value;
+            lumosImage.attributes.alt.value = image.attributes.alt.value;
+            if (lumosCaption !== null && void 0 !== image.attributes["data-lumos-caption"]) {
+                lumosCaption.innerHTML = image.attributes["data-lumos-caption"].value;
+            }
+            isVisible() || (lumosContainer.classList.remove("hidden"), lumosContainer.classList.add("visible"));
+        });
+    });
+
+    lumosContainer.addEventListener("click", hide);
+
+    window.addEventListener("keyup", e => {
+        "Escape" === e.key && hide();
+    });
+});
+
+
+</script>
+</body></html>
