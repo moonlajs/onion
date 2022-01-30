@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Click Animations With mo.js</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'>
+
+    
+<style>
+body {
+  background: #101213;
+}
+</style>
+  
+</head>
+
+<body>
+
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.2/mo.min.js'></script>
+
+  
+
+    <script  >
+	console.clear();
+
+const pop = new mojs.Shape({
+  fill: 'none',
+  stroke: { '#27ae60': '#c0392b' },
+  radius: { 0: 80 },
+   top : 0,
+	left:0,
+  strokeWidth: { 8: 0 },
+  opacity: { 1: 0 },
+  duration: 1000 
+  });
+
+
+const burst = new mojs.Burst({
+  radius: { 0: 400 },
+  angle: { 0: 100, easing: 'cubic.out' },
+  count: 25,
+   top : 0,
+	left:0,
+	
+  children: {
+    radius: { 0: 10 },
+    shape: 'circle',
+    fill: { '#fff': 'yellow' },
+	delay: 2100,
+    duration: 4800 } 
+});
+
+
+
+const spark = new mojs.Burst({
+  radius: { 50: 150 },
+  angle: { 0: 160 },
+  count: 30,
+   top : 0,
+	left:0,
+  children: {
+    shape: 'line',
+    stroke: { '#ff9800': '#ce665f' },
+    strokeWidth: { 5: 2 },
+	delay: 2100,
+    duration: 4800 } 
+});
+
+const spark1 = new mojs.Burst({
+  radius: { 80: 250 },
+  angle: { 0: 140 },
+  count: 20,
+   top : 0,
+	left:0,
+  children: {
+    shape: 'line',
+    stroke: { '#ff5500': '#ce6aaf' },
+    strokeWidth: { 6: 4 },
+	delay: 2300,
+    duration: 4800 } 
+});
+
+
+
+const lines = new mojs.Burst({
+  radius: { 50: 100 },
+  count: 10,
+   top : 0,
+	left:0,
+  children: {
+    shape: 'line',
+    stroke: '#e4bc81',
+    strokeWidth: 4,
+    opacity: { 1: 0 },
+	delay: 2100,
+    duration: 5000 } 
+});
+
+
+
+
+const triangles = new mojs.Burst({
+  radius: { 100: 150 },
+  angle: { 0: 120 },
+  count: 15,
+  top : 0,
+	left:0,
+  children: {
+    shape: 'polygon',
+    points: 10,
+    fill: '#cddc39',
+	delay: 2200,
+    duration: 5500 } 
+});
+
+const one = new mojs.Shape({
+	shape: 'polygon',
+	points: 3,
+	fill: 'none',
+
+  stroke: { '#27ae60': '#c0392b' },
+ 
+  strokeWidth: { 2: 1 },
+  opacity: { 1: 0.8 },
+  duration: 7000 ,
+  angle: {
+    0: -3
+  },
+ top : 0,
+ left:0,
+  
+});
+
+
+const two = new mojs.Shape({
+
+	shape: 'line',
+    stroke: 'yellow',
+    strokeWidth: 2,
+	
+	opacity: { 1: 0.8 },
+	
+	angle: {
+		90: 93
+	},
+	width:3,
+	top : 0,
+	left:0,
+}).then({
+ strokeWidth: 0,
+
+})
+
+
+const three = new mojs.Shape({
+
+	parent: two.el, // 定义父元素
+	radius: { 0: 400 },
+  angle: { 0: 100, easing: 'cubic.out' },
+  count: 25,
+  children: {
+    radius: { 0: 10 },
+    shape: 'circle',
+    fill: { '#fff': '#8e44ad' },
+    duration: 4800 } 
+
+})
+
+
+
+var animArr = [];// pop, burst, spark, triangles, lines
+animArr.push(burst);
+
+const timelineback = new mojs.Timeline();
+//const s =   timelineback.add(showBase)
+let ex = 0
+function bar(){
+
+	addEventListener('mousedown', e => {
+	 
+	 
+	 //animArr.forEach(anim => {
+	// anim.el.style.top = 0;
+	 //  anim.el.style.left = 0;
+	 //   anim.tune({ x: e.x, y: e.y }).replay();
+	//});
+
+	let fst = two;
+	//fst.el.style.top = 0;
+	//fst.el.style.left = 0;
+	fst.tune({ y: {
+		[e.y]: 150,
+		 easing: 'cubic.out'
+	  },
+	  x: {
+		[e.x]: e.x,
+		 easing: 'cubic.out'
+	  },
+	  duration: 2000 ,
+	  }).replay();
+	  
+	 spark.tune({
+	   x: e.x, y: 150,
+		
+	  }).replay()
+	  
+	  
+	  spark1.tune({
+	   x: e.x, y: 150,
+		
+	  }).replay()
+	  
+	  
+	   burst.tune({
+	   x: e.x, y: 150,
+		
+	  }).replay();
+		// timelineback.add(two).play()
+		
+	
+		
+		lines.tune({
+	   x: e.x, y: 150,
+		
+	  }).replay()
+	  
+	  triangles.tune({
+	   x: e.x, y: 150,
+		
+	  }).replay()
+	});
+
+}
+
+
+function foo(){
+
+
+addEventListener('mousedown', e => {
+	 
+	 
+	 //animArr.forEach(anim => {
+	// anim.el.style.top = 0;
+	 //  anim.el.style.left = 0;
+	 //   anim.tune({ x: e.x, y: e.y }).replay();
+	//});
+let fst = burst;
+fst.el.style.top = 0;
+fst.el.style.left = 0;
+fst.tune({ x: e.x, y: e.y }).replay();
+})
+
+}
+	bar()
+	
+	
+	
+	
+	</script>
+
+
+
+
+</body>
+
+</html>

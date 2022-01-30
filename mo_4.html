@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>mo.min.js</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  
+
+   
+
+<style>
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #EA485C;
+  overflow: hidden;
+}
+
+</style>
+
+ </head>
+  <body>
+
+ 
+
+   <script src="mo.min.js"  ></script>
+   
+<script>
+// 颜色
+const COLORS = {
+  RED: '#FD5061',
+  YELLOW: '#FFCEA5',
+  BLACK: '#29363B',
+  WHITE: 'white',
+  VINOUS: '#A50710'
+}
+
+// 过渡时间
+const DURATION = 800;
+
+
+//   rx: 50;
+//   ry: 50;
+//   cx: 51;
+//   cy: 51;
+//   fill-opacity: 1;
+//   fill: deeppink;
+//   stroke-opacity: 1;
+//   stroke-width: 2;
+//   stroke: transparent;
+ new mojs.Shape({
+  
+}).play()
+
+
+
+
+
+// 父元素图形，只用于整体的位置的变化
+const showBase = new mojs.Shape({
+  shape: 'circle',
+  fill: 'green',
+  radius: 20,
+  x: {
+    [-150]: 0,
+    easing: 'cubic.out'
+  },
+  y: {
+    [90]: 0,
+    easing: 'cubic.out'
+  },
+  duration: DURATION + 400,
+  // 动画执行完毕，添加样式、事件
+  onComplete() {
+    this.el.style.cursor = 'pointer'; 
+    this.el.addEventListener('click', // 点击按钮放大动画
+	function scaleAnime() {
+	  circle.tune({
+		delay: 0,
+		scale: {
+		  .4: 30
+		},
+		opacity: 1,
+		duration: 500,
+		easing: 'cubic.inout'
+	  }).replay()
+	}, 
+false)
+  }
+});
+
+
+//按钮的白色背景
+const showUp = new mojs.Shape({
+	fill: 'red',
+	stroke: COLORS.WHITE,
+	parent: showBase.el, // 定义父元素
+	radius: {
+		0: 10
+	},
+	angle: {
+		560: 270
+	},
+	strokeWidth: {
+		0: 22,
+		easing: 'cubic.inout'
+	},
+	strokeDasharray: '100%',
+	strokeDashoffset: {
+		'-100%': '0%',
+		easing: 'cubic.in'
+	},
+	strokeLinecap: 'round',// butt | round | square | inherit
+	duration: DURATION,
+})
+.then({
+	scale: .75,
+	duration: 250
+})
+.then({
+	scale: 1,
+	duration: 300
+});
+
+
+const showUp1 = new mojs.Shape({
+	fill: 'red',
+	stroke: COLORS.WHITE,
+	parent: showBase.el, // 定义父元素
+	x:-50,
+	y:50,
+	radius: {
+		0: 10
+	},
+	angle: {
+		560: 270
+	},
+	strokeWidth: {
+		0: 22,
+		easing: 'cubic.inout'
+	},
+	strokeDasharray: '100%',
+	strokeDashoffset: {
+		'-100%': '0%',
+		easing: 'cubic.in'
+	},
+	strokeLinecap: 'round',// butt | round | square | inherit
+	duration: DURATION,
+})
+.then({
+	scale: .7,
+	duration: 250
+})
+.then({
+	scale: 1,
+	duration: 300
+});
+const showUp2 = new mojs.Shape({
+	fill: 'red',
+	x:50,
+	y:50,
+	stroke: COLORS.WHITE,
+	parent: showBase.el, // 定义父元素
+	radius: {
+		0: 10
+	},
+	angle: {
+		560: 270
+	},
+	strokeWidth: {
+		0: 22,
+		easing: 'cubic.inout'
+	},
+	strokeDasharray: '100%',
+	strokeDashoffset: {
+		'-100%': '0%',
+		easing: 'cubic.in'
+	},
+	strokeLinecap: 'round',// butt | round | square | inherit
+	duration: DURATION,
+})
+
+// 最后执行的圆形扩散
+const circle = new mojs.Shape({
+  fill: COLORS.WHITE,
+  parent: showBase.el, // 定义父元素
+  radius: 50,
+  scale: {
+    .4: 1
+  },
+  duration: 650,
+  opacity: {
+    0.5: 0
+  },
+  delay: DURATION + 100,
+  easing: 'cubic.out'
+});
+
+
+//加号按钮
+const addButtonCross = new mojs.Shape({
+  shape: 'cross',
+  //parent: showUp.el, // 定义旋转的圆形为父元素
+  fill: 'none',
+  stroke: COLORS.VINOUS,
+  radius: 6,
+  strokeLinecap: 'round',
+  isShowStart: true,
+  duration: DURATION,
+  angle: {
+    0: -360
+  },
+  scale: {
+    0: 1
+  },
+  y: {
+    35: 0
+  },
+  x: {
+    35: 0
+  },
+}).then({
+  angle: -1540,
+  duration: DURATION / 2,
+  easing: 'cubic.out'
+});
+
+
+const timelineback = new mojs.Timeline();
+ //timelineback.add(showBase).play();
+timelineback.add(showBase, circle, showUp,showUp1,showUp2, addButtonCross).play();
+ //timelineback.add( showUp1,showUp2).play();
+</script>
+  </body>
+</html>

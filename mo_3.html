@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>mo.min.js</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  
+
+   
+
+<style>
+
+body{
+	
+	margin:0
+
+}
+
+</style>
+
+ </head>
+  <body>
+
+ 
+
+   <script src="mo.min.js"  ></script>
+   
+<script>
+//console.log(mojs)
+
+const OPTIONS = {
+  shape: 'circle',
+  fill: 'none',
+  radius: 25,
+  stroke: 'cyan',
+  scale: {
+    0: 1
+  },
+  easing: 'cubic.out',
+left: "00%",
+top: "00%",
+toooooooooooooop:'yyyyyyyyyyyyy',
+}
+
+
+//大圆
+let circle1 = new mojs.Shape({
+  ...OPTIONS,
+  strokeWidth: {
+    50: 0
+  }
+}).play()
+
+
+
+// 小圆
+let circle2 = new mojs.Shape({
+  ...OPTIONS,
+  radius: 10,
+  stroke: 'magenta',
+  strokeWidth: {
+	15: 0
+  },
+  
+  delay: 200
+}).play()
+
+
+document.addEventListener('click', e => {
+  // 鼠标点击时的x，y坐标
+  let x = e.pageX,
+    y = e.pageY;
+ // console.log(x,y)
+  
+		//播放前重置参数
+		//new mojs.Shape()
+		//.tune({
+		  // 新的参数
+		//})
+		//.play()
+  // 播放圆形1动画
+  circle1.tune({
+    x,
+    y
+  }).replay()
+  
+  // 播放圆形2动画
+  circle2.tune({
+    x,
+    y
+  }).replay()
+  //x=272px y = 158px
+  //transform: translate(272px, 158px) rotate(0deg) scale(1, 1);
+})
+
+
+
+
+let rect = new mojs.Shape({
+  shape: 'rect', // 定义形状为矩形
+  fill: 'cyan', // 填充颜色
+  isShowStart: true, // 定义初始化之后就显示
+  x: 150,
+  y: 200,
+  left: "00%",
+top: "00%",
+})
+
+
+
+let circle3 = new mojs.Shape({
+  shape: 'circle', // 定义形状为圆形
+  fill: 'cyan', // 填充颜色
+  isShowStart: true,
+  x: 0,
+  y: 0,
+  left: "00%",
+top: "00%",
+})
+
+
+
+let circle4 = new mojs.Shape({
+  shape: 'circle',
+  stroke: 'cyan', // 画笔颜色
+  fill: 'none', // 不填充
+  isShowStart: true,
+  x: 350,
+  y: 150,
+  left: "00%",
+top: "00%",
+})
+
+
+let rect2 = new mojs.Shape({
+  shape: 'rect',
+  fill: 'none',
+  stroke: 'red',
+  radius: 10,
+  strokeWidth: 20, // 画笔宽度
+  angle: {
+    [-180]: 0 // 使用对象的形式设置，key为开始值，val为结束值（任何属性都可以设置过渡）
+  },
+// duration: 400 // 默认为300ms
+ x: 450,
+  y: 150,
+  left: "00%",
+top: "00%",
+}).play()
+
+
+let rect3 = new mojs.Shape({
+	shape: 'rect',
+  fill: 'none',
+  stroke: 'green',
+   radius: 20,
+  strokeWidth: 20, // 画笔宽度
+  x: {
+    [-100]: 100
+  },
+  delay: 500, // 动画延迟500ms执行
+  repeat: 2, // 动画重复的次数
+  isYoyo: true, // 是否轮流反向播放（类似css3中的animation-direction）
+  isShowEnd: true // 动画结束后图形是否显示，默认为true
+}).play()
+
+
+
+new mojs.Shape({
+  shape: 'rect',
+  fill: 'none',
+  stroke: 'cyan',
+  radius: 10,
+  strokeWidth: 20,
+  angle: {
+    [-180]: 0
+  },
+  duration: 600,
+  onStart (isForward, isYoyo) {
+    // 动画开始执行
+	console.log('11111',isForward, isYoyo)//11111 true false
+  },
+  onComplete (isForward, isYoyo) {
+    // 动画执行完毕
+    
+    // this举例，如动画执行完成需要移除DOM
+    //this.el.remove()
+	console.log('22222',isForward, isYoyo)//22222 true false
+  },
+  onProgress (p, isForward, isYoyo) {
+    // 动画执行时
+	console.log('33333',p, isForward, isYoyo)//33333 0.7566666666666667 true undefined
+  }
+}).then({
+  strokeWidth: {
+    90: 0 // 画笔大小由50过渡到0，所以图形消失了
+  },
+  stroke: {
+    'magenta': 'yellow' // 画笔颜色由magenta过渡到yellow
+  }
+}).then({
+  strokeWidth: {
+    0: 70 
+  },
+  stroke: {
+    'yellow': '' // 画笔颜色过渡
+  }
+}).play()
+
+
+
+document.addEventListener('mousemove', e => {
+  let x = e.pageX,
+    y = e.pageY;
+
+  new mojs.Shape({
+    ...OPTIONS,
+    strokeWidth: {
+      50: 0
+    },
+    x,
+    y,
+    onComplete() {
+      this.el.remove()
+    }
+  }).play()
+
+  new mojs.Shape({
+    ...OPTIONS,
+    radius: 10,
+    stroke: 'magenta',
+    strokeWidth: {
+      15: 0
+    },
+    delay: 200,
+    x,
+    y,
+    onComplete() {
+      this.el.remove()
+    }
+  }).play()
+})
+</script>
+  </body>
+</html>
