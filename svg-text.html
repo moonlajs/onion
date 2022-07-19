@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="description" content="文字转SVG图像在线转换工具，文本内容转SVG，可以作为CSS background-image图片使用" />
+<meta name="keywords" content="转换, SVG, 在线, 工具, 样式定制, 转义, svg转义" />
+<meta name="author" content="张鑫旭, zhangxinxu" />
+<title>文字转SVG图像在线转换工具 » 张鑫旭-鑫空间-鑫生活</title>
+
+<style>
+.dn{display:none;}
+.clip{position:absolute;clip: rect(0 0 0 0);}
+.demo{max-width:600px;margin:auto;}
+.demo textarea{width:100%;width:-webkit-fill-aviable;width:fill-aviable;width:stretch;}
+.flex {
+    display: flex;
+    gap: 15px;
+}
+.flex section{flex:auto;position: relative;}
+.flex h4{margin-bottom: 5px;}
+fieldset {
+    border: 1px solid #ddd;
+}
+[type="number"]{width:100px;text-align: center;}
+[type="number"]:not(:last-child) {display:block;}
+.list input:not([type]){width: 216px;}
+.label{width: 5.5em; margin-right:10px; padding-top:10px;}
+.list{margin: 1em 0;display:flex;}
+.mark{font-size:12px;color: #a2a9b6;}
+.item-group{text-align: center;margin-right: 15px;}
+.list > .mark{padding-top: 10px;margin-left: 10px;}
+.preview{height:120px;overflow: hidden; resize: vertical; outline: 1px dotted; background: no-repeat center;}
+.operate{position: absolute; right: 0; top: 1em;}
+.operate button{width: 30px;height:30px;border:0;background:none; color: #a2a9b6; cursor: pointer; fill: currentColor;}
+.operate button:hover{color:#2a80eb;}
+body:active::after {
+    transform: translate(-50%, -100%);
+    opacity: 0.5;
+    transition: 0s;
+    left: -999px;
+}
+body::after {
+    content: '复制成功';
+    position: fixed;
+    z-index: 999;
+    left: calc(var(--pagex, -999) * 1px);
+    top: calc(var(--pagey, -999) * 1px);
+    transform: translate(-50%, calc(-100% - 20px));
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+    color: #1cad70;
+}
+.item-opacity{margin-left: 30px;}
+</style>
+</head>
+
+<body class="M">
+<div id="main">
+	<h1>文字转SVG图像在线转换工具</h1>
+   
+    <div id="body" class="light">
+    	<div id="content" class="show">
+        	<h3>展示</h3>
+            <div class="demo">
+                <form id="txtForm" class="config-form">
+                    <fieldset>
+                        <legend><strong>文字样式配置</strong></legend>
+                        <div class="list">
+                            <label for="txtContent" class="label">文字内容：</label>
+                            <input id="txtContent" name="content" class="ui-input" required value="这是提示文字">
+                        </div>
+                        <div class="list">
+                            <label class="label">SVG尺寸：</label>
+                            <div class="item-group"><input type="number" class="ui-input" value="300" size="5" name="width"><small class="mark">宽(px)</small></div>
+                            <div class="item-group"><input type="number" class="ui-input" value="150" size="5" name="height"><small class="mark">高(px)</small></div>
+                        </div>
+                        <div class="list"><label for="txtSize" class="label">文字字号：</label><input type="number" id="txtSize" class="ui-input" value="14" name="fontSize"><small class="mark">px</small></div>
+                        <div class="list">
+                            <label for="txtColor" class="label">文字颜色：</label>
+                            <div><input type="color" id="txtColor" class="ui-color-input" name="color" value="#a2a9b6"></div>
+                            <div class="item-opacity">透明度（0-1）：<input type="number" class="ui-input" min="0" max="1" step="0.01" value="1" name="opacity"></div>
+                        </div>
+                        <div class="list">
+                            <label for="txtFont" class="label">文字字体：</label>
+                            <input id="txtFont" name="fontFamily" class="ui-input" value="system-ui, sans-serif"><small class="mark">可以为空</small>
+                        </div>
+                        <div class="list">
+                            <label class="label" style="padding-top: 0;">文字中心点位置：</label>
+                            <div class="item-group"><input type="number" class="ui-input" name="x" value="50"><small class="mark">水平(%)</small></div>
+                            <div class="item-group"><input type="number" class="ui-input" name="y" value="50"><small class="mark">垂直(%)</small></div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="flex">
+                    <section>
+                        <h4>原始SVG</h4>
+                        <div class="operate">
+                            <button id="btnDown" class="jsTips" title="下载"><svg width="20" height="20"><use xlink:href="#icon-download"></use></svg></button>
+                        </div>
+                        <textarea id="originSvg" class="ui-textarea" rows="6" resize="vertical" placeholder="可以绕开配置直接粘贴进行转义"></textarea>
+                    </section>
+                    <section>
+                        <h4>安全转义后</h4>
+                        <div class="operate">
+                            <button id="btnCopy" class="jsTips" title="复制"><svg width="20" height="20"><use xlink:href="#icon-copy"></use></svg></button>
+                        </div>
+                        <textarea id="encodeSvg" class="ui-textarea" rows="6" resize="vertical" readonly></textarea>
+                    </section>
+                </div>
+                
+                <h4>背景效果预览</h4>
+                <div id="preview" class="preview"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dn">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<symbol id="icon-download" viewBox="0 0 1024 1024"><path d="M332.32 464.112l144 160a47.952 47.952 0 0 0 71.36 0l144-160a48 48 0 0 0-71.36-64.224L560 466.912V176a48 48 0 1 0-96 0v290.912l-60.32-67.024a48 48 0 1 0-71.36 64.224zM880 560a48 48 0 0 0-48 48v192H192V608a48 48 0 1 0-96 0v240a48 48 0 0 0 48 48h736a48 48 0 0 0 48-48V608a48 48 0 0 0-48-48z"></path></symbol>
+<symbol id="icon-copy" viewBox="0 0 1024 1024"><path d="M969.142857 219.428571q22.857143 0 38.857143 16t16 38.857143v694.857143q0 22.857143-16 38.857143t-38.857143 16H420.571429q-22.857143 0-38.857143-16t-16-38.857143v-164.571428H54.857143q-22.857143 0-38.857143-16t-16-38.857143V365.714286q0-22.857143 11.428571-50.285715t27.428572-43.428571L272 38.857143q16-16 43.428571-27.428572t50.285715-11.428571h237.714285q22.857143 0 38.857143 16t16 38.857143v187.428571q38.857143-22.857143 73.142857-22.857143h237.714286z m-310.857143 121.714286L487.428571 512h170.857143V341.142857zM292.571429 121.714286L121.714286 292.571429h170.857143V121.714286z m112 369.714285l180.571428-180.571428V73.142857H365.714286v237.714286q0 22.857143-16 38.857143t-38.857143 16H73.142857v365.714285h292.571429v-146.285714q0-22.857143 11.428571-50.285714t27.428572-43.428572z m546.285714 459.428572V292.571429h-219.428572v237.714285q0 22.857143-16 38.857143t-38.857142 16H438.857143v365.714286h512z"></path></symbol></svg>
+</div>
+
+
+<script>
+var eleForm = document.getElementById('txtForm');
+var elePreview = document.getElementById('preview');
+var eleOriginSvg = document.getElementById('originSvg');
+var eleEncodeSvg = document.getElementById('encodeSvg');
+var eleBtnCopy = document.getElementById('btnCopy');
+var eleBtnDown = document.getElementById('btnDown');
+
+var renderFormData = function () {
+    var eleInputs = eleForm.querySelectorAll('input[name]');
+    var data = {
+        width: 300,
+        height: 150,
+        fontSize: 14,
+        fontFamily: 'system-ui, sans-serif',
+        color: '#a2a9b6',
+        opacity: 1,
+        x: 50,
+        y: 50
+    };
+    eleInputs.forEach(function (input) {
+        var name = input.name;
+        var value = input.value.trim();
+
+        if (value === '') {
+            if (name == 'fontFamily') {
+                data[name] = '';
+            }
+            return;
+        }
+
+        if (input.type == 'number') {
+            value = Number(value);
+        }
+
+        data[name] = value;
+    });
+
+    var size = ' width="'+ data.width +'" height="'+ data.height +'"';
+
+    if (data.width == 300 && data.height == 150) {
+        size = '';
+    }
+
+    var fill = ` fill="${data.color}"`;
+    if (data.color == '#000000') {
+        fill = '';
+    }
+
+    var fillOpacity = ` fill-opacity="${data.opacity}"`;
+    if (data.opacity == 1) {
+        fillOpacity = '';
+    }
+
+    var fontFamily = ` font-family="${data.fontFamily}"`;
+    if (data.fontFamily == '') {
+        fontFamily = '';
+    }
+    
+    eleOriginSvg.value = `<svg${size} xmlns="http://www.w3.org/2000/svg"><text x="${data.x}%" y="${data.y}%" font-size="${data.fontSize}"${fill}${fillOpacity}${fontFamily} text-anchor="middle" dominant-baseline="middle">${data.content}</text></svg>`;
+    // 触发编码执行
+    eleOriginSvg.dispatchEvent(new CustomEvent('input'));
+};
+
+// 原始SVG代码输入框发生变化的时候，编码的SVG代码也跟着一起变化
+eleOriginSvg.addEventListener('input', function () {
+    eleEncodeSvg.value = "data:image/svg+xml," + this.value.trim().replace(/\n/g, '').replace(/"/g,"'").replace(/%/g,"%25").replace(/#/g,"%23").replace(/{/g,"%7B").replace(/}/g,"%7D").replace(/</g,"%3C").replace(/>/g,"%3E");
+
+    // 预览效果
+    elePreview.style.backgroundImage = 'url("' + eleEncodeSvg.value + '")';
+
+    if (document.querySelector('#txtColor').value.toLowerCase() == '#ffffff') {
+        elePreview.style.backgroundColor = '#000';
+    } else {
+        elePreview.style.backgroundColor = '';
+    }
+});
+
+// 表单发生变化的时候，SVG代码也跟着变化
+eleForm.addEventListener('input', function () {
+    renderFormData();
+});
+eleForm.addEventListener('change', function () {
+    renderFormData();
+});
+
+// 默认就执行一遍
+renderFormData();
+
+// 复制功能
+eleBtnCopy.addEventListener('click', function (event) {
+    eleEncodeSvg.focus();
+    eleEncodeSvg.setSelectionRange(0, eleEncodeSvg.value.length);
+    document.execCommand('copy', true); 
+});
+// 下载功能
+eleBtnDown.addEventListener('click', function (event) {
+    var content = document.querySelector('#txtContent').value.trim();
+
+    if (!eleOriginSvg.value) {
+        new ErrorTip(eleOriginSvg, '没有内容臣妾没法下载啊');
+        return;
+    }
+
+    var suffix = Math.sin(content.split('').map(function (char) {
+        return char.charCodeAt(0);
+    }).join('')) + '';
+
+    // 下载的文件名
+    var filename = 'text-' + suffix.slice(-6) + '.svg';
+    // 创建隐藏的可下载链接
+    var eleLink = document.createElement('a');
+    eleLink.download = filename;
+    eleLink.style.display = 'none';
+    // 字符内容转变成blob地址
+    var blob = new Blob([eleOriginSvg.value], {type: 'image/svg+xml'});
+    eleLink.href = URL.createObjectURL(blob);
+    // 触发点击
+    document.body.appendChild(eleLink);
+    eleLink.click();
+    // 然后移除
+    document.body.removeChild(eleLink);
+});
+
+// 复制成功提示的实现
+document.addEventListener('mousedown', function (event) {
+    if (event.target.closest('#btnCopy')) {
+        document.body.style.setProperty('--pagex', event.pageX);
+        document.body.style.setProperty('--pagey', event.pageY);
+    } else {
+        document.body.style.setProperty('--pagex', '');
+        document.body.style.setProperty('--pagey', '');
+    }    
+});
+</script>
+
+
+</body>
+</html>
